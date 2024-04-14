@@ -452,7 +452,7 @@ nav ul li a:hover {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 135vh;
+    height: 145vh;
   }
 }
 
@@ -548,7 +548,53 @@ nav ul li a:hover {
     /* background-color: aqua; */
   }
 }
+@media screen and (max-width: 854px) {
+  #skills {
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+    margin: 0 5%;
+  }
+  #experience {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 130vh;
+  }
 
+  #aboutme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+  }
+}
+
+@media screen and (max-width: 821px) {
+  #skills {
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+    margin: 0 5%;
+  }
+  #experience {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 140vh;
+  }
+
+  #aboutme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+  }
+}
 @media screen and (max-width: 720px) {
   nav {
     display: flex;
@@ -702,6 +748,10 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 475px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   nav {
     display: flex;
     flex-direction: column;
@@ -853,6 +903,30 @@ nav ul li a:hover {
   }
 }
 
+@media screen and (max-width: 813px) {
+  #skills {
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+    margin: 0 5%;
+  }
+  #experience {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 220vh;
+  }
+
+  #aboutme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 130vh;
+  }
+}
+
 @media screen and (max-width: 410px) {
   nav {
     display: flex;
@@ -928,6 +1002,46 @@ nav ul li a:hover {
     /* background-color: aqua; */
   }
 }
+
+
+
+@media screen and (max-width: 391px) {
+    
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  #skills {
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+    margin: 0 5%;
+  }
+  #experience {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 240vh;
+  }
+
+  #aboutme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 150vh;
+  }
+
+  #contactme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 55vh;
+  }
+}
+
 
 @media screen and (max-width: 380px) {
   nav {
@@ -1005,7 +1119,52 @@ nav ul li a:hover {
   }
 }
 
+@media screen and (max-width: 361px) {
+    
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  #skills {
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+    margin: 0 5%;
+  }
+  #experience {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 280vh;
+  }
+
+  #aboutme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 180vh;
+  }
+
+  #contactme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 55vh;
+  }
+}
+
+
+
+
 @media screen and (max-width: 300px) {
+    
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   nav {
     display: flex;
     flex-direction: column;
