@@ -488,7 +488,7 @@ nav ul li a:hover {
   #skills {
     display: flex;
     justify-content: space-around;
-    height: 80vh;
+    height: 100vh;
     margin: 0 5%;
   }
   #experience {
@@ -548,14 +548,47 @@ nav ul li a:hover {
     /* background-color: aqua; */
   }
 }
-@media screen and (max-width: 854px) {
+
+@media screen and (max-width: 856px) {
   #skills {
     display: flex;
     justify-content: space-around;
-    height: 50vh;
+    height: 100vh;
     margin: 0 5%;
   }
   #experience {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 240vh;
+  }
+  .ex-rightno-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+
+  .ex-rightno-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  .ex-rightno-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  #aboutme {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -563,12 +596,21 @@ nav ul li a:hover {
     height: 130vh;
   }
 
-  #aboutme {
+  .me-left {
+    display: none;
+  }
+  #contactme {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 70vh;
+    height: 75vh;
+  }
+  .me-left {
+    width: 100%;
+    height: 40%;
+    margin: 1% 3%;
+    /* background-color: aqua; */
   }
 }
 
@@ -576,7 +618,7 @@ nav ul li a:hover {
   #skills {
     display: flex;
     justify-content: space-around;
-    height: 50vh;
+    height: 100vh;
     margin: 0 5%;
   }
   #experience {
@@ -584,17 +626,124 @@ nav ul li a:hover {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 140vh;
+    height: 240vh;
+  }
+  .ex-rightno-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
   }
 
+  .ex-rightno-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  .ex-rightno-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
   #aboutme {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 70vh;
+    height: 130vh;
+  }
+
+  .me-left {
+    display: none;
+  }
+  #contactme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+  }
+  .me-left {
+    width: 100%;
+    height: 40%;
+    margin: 1% 3%;
+    /* background-color: aqua; */
   }
 }
+
+@media screen and (max-width: 815px) {
+  #skills {
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    margin: 0 5%;
+  }
+  #experience {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 280vh;
+  }
+  .ex-rightno-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+
+  .ex-rightno-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  .ex-rightno-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  #aboutme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 130vh;
+  }
+
+  .me-left {
+    display: none;
+  }
+  #contactme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+  }
+  .me-left {
+    width: 100%;
+    height: 40%;
+    margin: 1% 3%;
+    /* background-color: aqua; */
+  }
+}
+
 @media screen and (max-width: 720px) {
   nav {
     display: flex;
@@ -607,18 +756,13 @@ nav ul li a:hover {
   .btn-header {
     display: block;
   }
-  #skills {
-    display: flex;
-    justify-content: space-around;
-    height: 80vh;
-    margin: 0 5%;
-  }
+
   #experience {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 250vh;
+    height: 300vh;
   }
   .ex-rightno-1 {
     display: flex;
@@ -683,11 +827,83 @@ nav ul li a:hover {
   .btn-header {
     display: block;
   }
-  #skills {
+  #experience {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 280vh;
+  }
+  .ex-rightno-1 {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    height: 80vh;
+    width: 90%;
     margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+
+  .ex-rightno-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  .ex-rightno-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  #aboutme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 150vh;
+  }
+
+  .me-left {
+    display: none;
+  }
+  #contactme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+  }
+  .me-left {
+    width: 100%;
+    height: 40%;
+    margin: 1% 3%;
+    /* background-color: aqua; */
+  }
+}
+
+@media screen and (max-width: 525px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 80px;
+    background-color: rgb(7, 7, 56);
+  }
+  .btn-header {
+    display: block;
+  }
+
+  .arrange2 {
+    margin: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    /* background-color: green; */
   }
   #experience {
     display: flex;
@@ -763,12 +979,7 @@ nav ul li a:hover {
   .btn-header {
     display: none;
   }
-  #skills {
-    display: flex;
-    justify-content: space-around;
-    height: 80vh;
-    margin: 0 5%;
-  }
+
   #experience {
     display: flex;
     justify-content: flex-start;
@@ -839,12 +1050,7 @@ nav ul li a:hover {
   .btn-header {
     display: none;
   }
-  #skills {
-    display: flex;
-    justify-content: space-around;
-    height: 80vh;
-    margin: 0 5%;
-  }
+
   #experience {
     display: flex;
     justify-content: flex-start;
@@ -903,30 +1109,6 @@ nav ul li a:hover {
   }
 }
 
-@media screen and (max-width: 813px) {
-  #skills {
-    display: flex;
-    justify-content: space-around;
-    height: 50vh;
-    margin: 0 5%;
-  }
-  #experience {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    height: 220vh;
-  }
-
-  #aboutme {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    height: 130vh;
-  }
-}
-
 @media screen and (max-width: 410px) {
   nav {
     display: flex;
@@ -939,18 +1121,20 @@ nav ul li a:hover {
   .btn-header {
     display: none;
   }
-  #skills {
-    display: flex;
-    justify-content: space-around;
-    height: 80vh;
-    margin: 0 5%;
-  }
+
   #experience {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     height: 310vh;
+  }
+  .arrange2 {
+    margin: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    /* background-color: green; */
   }
   .ex-rightno-1 {
     display: flex;
@@ -1003,20 +1187,12 @@ nav ul li a:hover {
   }
 }
 
-
-
 @media screen and (max-width: 391px) {
-    
   body {
     max-width: 100%;
     overflow-x: hidden;
   }
-  #skills {
-    display: flex;
-    justify-content: space-around;
-    height: 50vh;
-    margin: 0 5%;
-  }
+
   #experience {
     display: flex;
     justify-content: flex-start;
@@ -1024,7 +1200,13 @@ nav ul li a:hover {
     flex-direction: column;
     height: 240vh;
   }
-
+  .arrange2 {
+    margin: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    /* background-color: green; */
+  }
   #aboutme {
     display: flex;
     justify-content: flex-start;
@@ -1042,7 +1224,6 @@ nav ul li a:hover {
   }
 }
 
-
 @media screen and (max-width: 380px) {
   nav {
     display: flex;
@@ -1055,12 +1236,7 @@ nav ul li a:hover {
   .btn-header {
     display: none;
   }
-  #skills {
-    display: flex;
-    justify-content: space-around;
-    height: 80vh;
-    margin: 0 5%;
-  }
+
   #experience {
     display: flex;
     justify-content: flex-start;
@@ -1120,47 +1296,172 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 361px) {
-    
   body {
     max-width: 100%;
     overflow-x: hidden;
   }
-  #skills {
+
+  nav {
     display: flex;
-    justify-content: space-around;
-    height: 50vh;
-    margin: 0 5%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 80px;
+    background-color: rgb(7, 7, 56);
   }
+  .btn-header {
+    display: none;
+  }
+
   #experience {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 280vh;
+    height: 350vh;
+  }
+  .arrange2 {
+    margin: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    /* background-color: green; */
+  }
+  .ex-rightno-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
   }
 
+  .ex-rightno-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  .ex-rightno-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
   #aboutme {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 180vh;
+    height: 200vh;
   }
 
+  .me-left {
+    display: none;
+  }
   #contactme {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 55vh;
+    height: 75vh;
+  }
+  .me-left {
+    width: 100%;
+    height: 40%;
+    margin: 1% 3%;
+    /* background-color: aqua; */
   }
 }
 
+@media screen and (max-width: 361px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 80px;
+    background-color: rgb(7, 7, 56);
+  }
+  .btn-header {
+    display: none;
+  }
 
+  #experience {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 350vh;
+  }
+  .arrange2 {
+    margin: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    /* background-color: green; */
+  }
+  .ex-rightno-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+
+  .ex-rightno-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  .ex-rightno-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  #aboutme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 200vh;
+  }
+
+  .me-left {
+    display: none;
+  }
+  #contactme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+  }
+  .me-left {
+    width: 100%;
+    height: 40%;
+    margin: 1% 3%;
+    /* background-color: aqua; */
+  }
+}
 
 @media screen and (max-width: 300px) {
-    
   body {
     max-width: 100%;
     overflow-x: hidden;
@@ -1176,12 +1477,82 @@ nav ul li a:hover {
   .btn-header {
     display: none;
   }
-  #skills {
+
+  #experience {
     display: flex;
-    justify-content: space-around;
-    height: 80vh;
-    margin: 0 5%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 350vh;
   }
+  .ex-rightno-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+
+  .ex-rightno-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  .ex-rightno-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 5%;
+    background-color: rgb(23, 17, 76);
+  }
+  #aboutme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 230vh;
+  }
+
+  .me-left {
+    display: none;
+  }
+  #contactme {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+  }
+  .me-left {
+    width: 100%;
+    height: 40%;
+    margin: 1% 3%;
+    /* background-color: aqua; */
+  }
+}
+
+@media screen and (max-width: 300px) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 80px;
+    background-color: rgb(7, 7, 56);
+  }
+  .btn-header {
+    display: none;
+  }
+
   #experience {
     display: flex;
     justify-content: flex-start;
