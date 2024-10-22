@@ -175,8 +175,7 @@
               <br>I graduated from an esteemed university, <b>Vidyalankar School of Information Technology (VSIT)</b> from Mumbai.
             </p>
             <br />
-            <p>With over 1.5 years of experience and proficient in Backend, Full-Stack Development and Database management.
-              I've honed a versatile Skill set in<b> C#, .NET, ASP.NET, Java, JavaScript, Python and SQL Developer</b>.
+            <p id ="demo-year-of-exp">With over </b>
             </p>
             <br />
             <p>
@@ -261,6 +260,7 @@
     </main>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
     <script>
       function callalert() {
         alert("Hey visitors, will reach to you soon");
@@ -278,6 +278,51 @@
         loop: true,
         loopCount: Infinity,
       });
+    </script>
+
+
+<!-- added new script for auto calculating the no. of year of experience in corporate life -->
+    <script>
+       var yearDiff
+        var monthDiff
+        function getYearMonthDifference(startDate, endDate) {
+            let startYear = startDate.getFullYear();
+            let startMonth = startDate.getMonth();
+            let endYear = endDate.getFullYear();
+            let endMonth = endDate.getMonth();
+
+            yearDiff = endYear - startYear;
+            monthDiff = endMonth - startMonth;
+
+            if (monthDiff < 0) {
+                yearDiff--;
+                monthDiff += 12;
+            }
+            if (monthDiff == 12) {
+                return yearDiff + 1;
+            }
+            else {
+                return { yearDiff, monthDiff };
+            }
+        }
+
+        let date1 = new Date('Oct 10 2022');//Starting year of job in the corporate life
+        let date2 = new Date(); // Current date
+        let difference = getYearMonthDifference(date1, date2);
+
+
+        if (monthDiff == 0) {
+            var stored = difference.yearDiff + " years of experience and proficient in Backend, Full-Stack Development and Database management. I've honed a versatile Skill set in<b> C#, .NET, ASP.NET, Java, JavaScript, Python and SQL Developer.";
+        }
+        else {
+            var stored = difference.yearDiff + "." + difference.monthDiff + " years of experience and proficient in Backend, Full-Stack Development and Database management."+
+             " I've honed a versatile Skill set in<b> C#, .NET, ASP.NET, Java, JavaScript, Python and SQL Developer.";
+        }
+
+        var paragraph = document.getElementById("demo-year-of-exp");
+        var text = document.createTextNode(stored);
+
+        paragraph.appendChild(text);
     </script>
   </body>
 </html>
