@@ -1,10 +1,9 @@
-/* General Body & Typography */
+/* Start Master section of the website */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* Add this to the top of your style.css file */
 
 html {
     scroll-behavior: smooth;
@@ -13,25 +12,19 @@ html {
 section[id] {
     scroll-margin-top: 30px; /* Adjust this value if needed */
 }
-/* body { */
-    /* font-family: 'Poppins', sans-serif; */
-    /* line-height: 1.6; */
-    /* background-color: #f4f4f4; */
-    /* color: #333; */
-/* } */
+/* End Master section of the website */
 
-/* REPLACE your existing body style with this */
+
+/* Start Body section */
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
-    /* The new animated gradient background */
-    background: linear-gradient(-45deg, #e0eafc, #f3e7e9, #d3e3fc, #e5e0ff);
+    background: linear-gradient(-45deg, #e0eafc, #f3e7e9, #d3e3fc, #e5e0ff); /* The new animated gradient background */
     background-size: 400% 400%;
     animation: moveGradient 15s ease infinite;
 }
 
-/* ADD this keyframe animation rule to your CSS file */
 @keyframes moveGradient {
     0% {
         background-position: 0% 50%;
@@ -43,103 +36,14 @@ body {
         background-position: 0% 50%;
     }
 }
-
-/* ADD or REPLACE these rules to make sections transparent */
-
 .gray-bg {
-    /* We no longer need this class to have its own color */
     background-color: transparent;
 }
+/* End Body section */
 
-.skill-item,
-.experience-content,
-.contact-container {
-    /* Update all cards to have a semi-transparent white background */
-    background-color: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(5px); /* Optional: Adds a nice frosted glass effect */
-    -webkit-backdrop-filter: blur(5px);
-}
 
-h1, h2, h3 {
-    font-weight: 600;
-}
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Header & Navigation Bar */
-/* .header { */
-    /* background-color: #fff; */
-    /* border-bottom: 1px solid #ddd; */
-    /* position: fixed; */
-    /* width: 100%; */
-    /* top: 0; */
-    /* z-index: 1000; */
-/* } */
-
-/* .navbar { */
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    /* padding: 1rem 5%; */
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
-/* } */
-
-/* .nav-logo { */
-    /* font-size: 1.5rem; */
-    /* font-weight: 700; */
-    /* color: #333; */
-/* } */
-
-/* .nav-menu { */
-    /* display: flex; */
-    /* align-items: center; */
-    /* list-style: none; */
-    /* gap: 2rem; */
-/* } */
-
-/* .nav-link { */
-    /* transition: color 0.3s ease; */
-/* } */
-
-/* .nav-link:hover { */
-    /* color: #007bff; */
-/* } */
-
-/* .nav-button { */
-    /* background-color: #007bff; */
-    /* color: #fff; */
-    /* padding: 0.5rem 1rem; */
-    /* border-radius: 5px; */
-    /* transition: background-color 0.3s ease; */
-/* } */
-
-/* .nav-button:hover { */
-    /* background-color: #0056b3; */
-    /* color: #fff; */
-/* } */
-
-/* .hamburger { */
-    /* display: none; */
-    /* cursor: pointer; */
-/* } */
-
-/* .bar { */
-    /* display: block; */
-    /* width: 25px; */
-    /* height: 3px; */
-    /* margin: 5px auto; */
-    /* -webkit-transition: all 0.3s ease-in-out; */
-    /* transition: all 0.3s ease-in-out; */
-    /* background-color: #333; */
-/* } */
-
-/* REPLACE all of your old header and navbar styles with this new block */
-
-/* Header & Navigation Bar */
+/* Start Header & Navigation Bar */
 .header {
     background-color: rgba(255, 255, 255, 0.85); /* UPDATED: Semi-transparent background */
     backdrop-filter: blur(10px); /* NEW: This creates the frosted glass effect */
@@ -242,6 +146,29 @@ a {
     }
 }
 
+/* End Header & Navigation Bar */
+
+
+
+.skill-item,
+.experience-content,
+.contact-container {
+    /* Update all cards to have a semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(5px); /* Optional: Adds a nice frosted glass effect */
+    -webkit-backdrop-filter: blur(5px);
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
 
 /* Main Content & Sections */
 main {
@@ -339,7 +266,7 @@ main {
 
 .hero-subtitle {
     font-size: 2.5rem;
-    color: #555;
+    color: #ffa600;
     font-weight: 600;
     margin-bottom: 1.5rem;
 }
