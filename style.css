@@ -454,6 +454,11 @@ main {
     margin-bottom: 0.5rem;
 }
 
+.skill-item img {
+    width: 5.5rem;   /* Controls the width of your image */
+    height: 5.5rem;  /* Controls the height of your image */
+    margin-bottom: 0.5rem;
+}
 .skill-item p {
     font-size: 0.9rem;
     font-weight: 500;
