@@ -26,7 +26,7 @@ var getyear = date.getFullYear().toString();
 
 //yearchange.innerHTML = "&copy;" + getyear +", Mumbai" ;
 
-var text = document.createTextNode(getyear +", Mumbai");
+var text = document.createTextNode(getyear +", All Rights Reserved");
 yearchange.appendChild(text);
 
 
@@ -34,7 +34,7 @@ yearchange.appendChild(text);
 // Typing Animation
 document.addEventListener('DOMContentLoaded', function() {
     const typingText = document.querySelector('.typing-text');
-    const words = ["Software Engineer", "Web Developer", "Creative Coder", "Problem Solver"];
+    const words = ["Programmer","Software Engineer","Application Developer","Web Developer","Full-Stack Developer","Problem Solver"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -59,6 +59,5 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(type, 1200);
         }
     }
-
     type();
 });
