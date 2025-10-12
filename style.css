@@ -175,80 +175,38 @@ main {
     padding-top: 70px; /* Offset for fixed header */
 }
 
-/* .hero { */
-    /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat; */
-    /* color: #fff; */
-    /* height: 80vh; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* text-align: center; */
-/* } */
-
-/* .hero-content { */
-    /* max-width: 800px; */
-/* } */
-
-/* .hero h1 { */
-    /* font-size: 3rem; */
-    /* margin-bottom: 1rem; */
-/* } */
-
-/* .hero p { */
-    /* font-size: 1.2rem; */
-    /* margin-bottom: 2rem; */
-/* } */
-
-/* .cta-button { */
-    /* background-color: #007bff; */
-    /* color: #fff; */
-    /* padding: 0.8rem 1.6rem; */
-    /* border-radius: 5px; */
-    /* font-weight: 600; */
-    /* transition: background-color 0.3s ease; */
-    /* border: none; */
-    /* cursor: pointer; */
-/* } */
-
-/* .cta-button:hover { */
-    /* background-color: #0056b3; */
-/* } */
-
-/* .content-section { */
-    /* padding: 4rem 5%; */
-    /* max-width: 1000px; */
-    /* margin: 0 auto; */
-/* } */
-
-/* .gray-bg { */
-    /* background-color: #fff; */
-/* } */
-
-/* .content-section h2 { */
-    /* text-align: center; */
-    /* margin-bottom: 2rem; */
-    /* font-size: 2rem; */
-/* } */
-
-/* REPLACE your old ".hero" styles with this new block */
-/* REPLACE your old ".hero" styles with this new block */
-
 /* Hero Section */
 .hero {
-    /* A cleaner, brighter background image choice */
-    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop') center/cover no-repeat;
+    /* MODIFIED: Removed static background image and added overflow:hidden */
     height: 100vh; /* Full viewport height */
     display: flex;
-    flex-direction: column; /* Align content and scroll arrow */
+    flex-direction: column; 
     justify-content: center;
     align-items: flex-start; /* Align content to the left */
     text-align: left;
     padding: 0 10%; /* Add horizontal padding */
-    position: relative; /* For the scroll down button positioning */
+    position: relative; /* For positioning child elements */
+    overflow: hidden; /* To hide the parts of slides that are off-screen */
 }
+
+/* ADDED: Overlay to ensure text is readable on any background image */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1; /* Sits between carousel background and text content */
+}
+
 
 .hero-content {
     max-width: 800px;
+    /* ADDED: z-index and position to make sure content is on top */
+    position: relative;
+    z-index: 2;
 }
 
 .hero-intro {
@@ -293,18 +251,6 @@ main {
     gap: 1rem;
 }
 
-/* .cta-button.secondary { */
-    /* background-color: transparent; */
-    /* color: #007bff; */
-    /* border: 2px solid #007bff; */
-/* } */
-
-/* .cta-button.secondary:hover { */
-    /* background-color: #007bff; */
-    /* color: #fff; */
-/* } */
-/* REPLACE your old .cta-button styles with this block */
-
 .cta-button {
     display: inline-flex; /* Use flexbox for icon alignment */
     align-items: center;
@@ -341,6 +287,49 @@ main {
     box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3); /* Add a subtle glow on hover */
 }
 
+/* START: New Carousel Styles */
+.carousel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Aligns slides horizontally */
+    transition: transform 1s ease-in-out; /* Smooth slide transition */
+    z-index: 0; /* Behind the overlay and content */
+}
+
+.carousel-slide {
+    flex: 0 0 100%; /* Each slide takes up the full viewport width */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-toggle-btn {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+/* END: New Carousel Styles */
 
 /* Scroll Down Arrow */
 .scroll-down {
@@ -351,6 +340,7 @@ main {
     color: #333;
     font-size: 1.5rem;
     animation: bounce 2s infinite;
+    z-index: 2; /* Ensure it's above the overlay */
 }
 
 /* Animations */
@@ -396,33 +386,13 @@ main {
 }
 
 /* Skills Section */
-/* .skills-container { */
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
-    /* gap: 1rem; */
-/* } */
-
-/* .skill-card { */
-    /* background-color: #e9ecef; */
-    /* padding: 0.7rem 1.5rem; */
-    /* border-radius: 20px; */
-    /* font-weight: 500; */
-/* } */
-
-
-
-/* Add or replace this rule in your style.css */
-
 .content-section {
     max-width: 1100px; /* Sets the maximum width of the content */
     margin: 0 auto;     /* Centers the content horizontally */
     padding: 4rem 5%;   /* Keeps your vertical and side padding */
     overflow: hidden;   /* Prevents any potential overflow issues */
 }
-/* REPLACE your old ".skill-card" style with all of the following */
 
-/* Skills Section */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -824,4 +794,106 @@ footer {
     .hero p {
         font-size: 1rem;
     }
+}
+
+
+/*Start: View resume button on about me section*/
+/* ADD this new block to the bottom of your style.css */
+
+/* --- Modal / Popup Styles --- */
+.modal-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 800px; /* Max width of the modal */
+    max-height: 90vh; /* Max height is 90% of the viewport height */
+    overflow-y: auto; /* Enable scroll if content is too long */
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 2.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: var(--text-primary);
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/*End: View resume button on about me section*/
+
+/* "About Me" Expand/Collapse Styles */
+.hidden-bio {
+    display: none;
+}
+
+.bio-toggle-link {
+    display: inline-block;
+    margin-bottom: 1.5rem; /* Space between this link and the resume button */
+    font-weight: 600;
+    color: var(--accent);
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.bio-toggle-link:hover {
+    color: var(--accent-hover);
+}
+
+/* Experience Section Show More/Less Styles */
+.hidden-duty {
+    display: none;
+}
+
+.toggle-duties-btn {
+    display: inline-block;
+    margin-top: 1rem; /* Adds space between the list and the button */
+    font-weight: 600;
+    color: var(--accent);
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.toggle-duties-btn:hover {
+    color: var(--accent-hover);
 }

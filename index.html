@@ -16,12 +16,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
+
   </head>
 
-  <!-- Body content starts -->
   <body>
 
-    <!--Start Header Main menu with navigation -->
     <header class="header">
       <nav class="navbar">
         <a href="#" class="nav-logo">Wasim Khan</a>
@@ -49,13 +48,15 @@
         </div>
       </nav>
     </header>
-    <!--End Header main menu with navigation -->
-
     <main>
 
-      <!--Start Landing Page -->
-
       <section class="hero">
+        <div class="carousel-container">
+          <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop');"></div>
+          <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop');"></div>
+          <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop');"></div>
+          <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop');"></div>
+        </div>
         <div class="hero-content">
           <p class="hero-intro anim">Hi, my name is</p>
           <h1 class="hero-name anim">Wasim Khan.</h1>
@@ -63,7 +64,7 @@
             <p>I am a <span class="typing-text"></span></p>
           </div>
           <p class="hero-description anim">
-            I'm a passionate Software Engineer based in Mumbai with 3 years of experience 
+            Passionate Software Engineer based in Mumbai with 3 years of experience 
             in backend and full-stack development. | Tech Enthusiast.
           </p>
           <div class="hero-buttons anim">
@@ -71,14 +72,15 @@
             <a href="#contact" class="cta-button">Get In Touch <i class="fas fa-envelope"></i></a>
           </div>
         </div>
+
+        <button id="carousel-toggle" class="carousel-toggle-btn" aria-label="Pause Carousel">
+            <i class="fas fa-pause"></i>
+        </button>
         <a href="#skills" class="scroll-down" aria-label="Scroll down">
           <i class="fas fa-chevron-down"></i>
         </a>
       </section>
 
-      <!--End Landing Page -->
-
-<!-- Start Skill section -->
       <section id="skills" class="content-section">
                 <h2>My Tech Stack</h2>
                 <div class="skills-container">
@@ -88,7 +90,6 @@
                     <div class="skill-item"><img src="skill-logo/ASP.NET.png" alt="Asp.NET"><p>ASP.NET</p></div>
                     <div class="skill-item"><img src="skill-logo/ASP.NET MVC.jpg" alt="Asp.NET MVC"><p>ASP.NET MVC</p></div>
                     <div class="skill-item"><img src="skill-logo/Sql_Server.png" alt="Sql Server"><p>SQL Server</p></div>
-                    <!-- <div class="skill-item"><i class="devicon-microsoftsqlserver-plain colored"></i><p>SQL Server</p></div> -->
                     <div class="skill-item"><i class="devicon-javascript-plain colored"></i></i><p>JavaScript</p></div>
                     <div class="skill-item"><i class="devicon-html5-plain colored"></i><p>HTML5</p></div>
                     <div class="skill-item"><i class="devicon-css3-plain colored"></i><p>CSS3</p></div>
@@ -96,10 +97,9 @@
                     <div class="skill-item"><img src="skill-logo/GitHub.png" alt="GitHub"><p>GitHub</p></div>
                 </div>
       </section>
-<!-- End Skill section -->
 
-      <!-- Start Experience section -->
-      <section id="experience" class="content-section gray-bg">
+
+<section id="experience" class="content-section gray-bg">
         <h2>My Journey</h2>
 
         <div class="timeline">
@@ -114,12 +114,14 @@
                 </p>
                 <span class="date">Jan 2024 - Present</span>
               </div>
-              <p>
+              <ul>
                 <li>Led the complete lifecycle development of a tailored ERP software solution for the Jewellery industry, achieving an 80% surge in manufacturing efficiency.</li>
                 <li>Enhanced production screen endpoint performance by 20% through the strategic implementation of MemoryCache and optimized LINQ queries, significantly elevating system efficiency, and user experience.</li>
-                <li>Streamlined backend operations by optimizing complex database queries, stored procedures, and managing SQL Server Agent Jobs, resulting in a 40% reduction in data loading time and fortified system stability.</li>
-                <li>Facilitated seamless collaboration with cross-functional product, QA, and design teams to meticulously define functional requirements and swiftly resolve high-priority issues, accelerating resolution times by 50% and fortifying overall system stability.</li> 
-              </p>
+                <li class="extra-duty hidden-duty">Streamlined backend operations by optimizing complex database queries, stored procedures, and managing SQL Server Agent Jobs, resulting in a 40% reduction in data loading time and fortified system stability.</li>
+                <li class="extra-duty hidden-duty">Facilitated seamless collaboration with cross-functional product, QA, and design teams to meticulously define functional requirements and swiftly resolve high-priority issues, accelerating resolution times by 50% and fortifying overall system stability.</li> 
+            </ul>
+                <a href="#" class="toggle-duties-btn">Show More...</a>  
+
             </div>
           </div>
 
@@ -135,13 +137,13 @@
                 </p>
                 <span class="date">Feb 2023 - Jan 2024</span>
               </div>
-              <p>
+              <ul>
                <li>Delivered a ground-up development of a Clone Product for policies for a leading insurance company, driving a 50% increase in policy processing speed, directly contributing to business success.</li>
-               <li>Utilized cutting-edge technologies like Azure and modern frameworks, and stacks including C#, VB.NET, ASP.NET, and WCF services to ensure scalability and high-performance resulting in enhancement of software capabilities by enabling real-time data processing.</li>
-               <li>Collaborated with cross-functional teams, including business analysts and testers, to ensure the successful and timely delivery of projects, consistently meeting deadlines and stakeholder expectations.</li>
+               <li class="extra-duty hidden-duty">Utilized cutting-edge technologies like Azure and modern frameworks, and stacks including C#, VB.NET, ASP.NET, and WCF services to ensure scalability and high-performance resulting in enhancement of software capabilities by enabling real-time data processing.</li>
+               <li class="extra-duty hidden-duty">Collaborated with cross-functional teams, including business analysts and testers, to ensure the successful and timely delivery of projects, consistently meeting deadlines and stakeholder expectations.</li>
+            </ul>
+             <a href="#" class="toggle-duties-btn">Show More...</a>  
 
-
-              </p>
             </div>
           </div>
 
@@ -156,20 +158,19 @@
                 </p>
                 <span class="date">Oct 2019 - Dec 2021</span>
               </div>
-              <p>
+              <ul>
                 <li>Actively participated in brainstorming sessions, workshops, and training programs to stay updated with emerging trends and best practices in software development.</li>
-                <li>Build a 3D game (Maze VR) for the organization as an incubator project at the end of the Trainee.</li>
-                <li>Technology used: Unity3D Engine and C#</li>
+                <li class="extra-duty hidden-duty">Build a 3D game (Maze VR) for the organization as an incubator project at the end of the Trainee.</li>
+                <li class="extra-duty hidden-duty">Technology used: Unity3D Engine and C#</li>
+            </ul>     
+             <a href="#" class="toggle-duties-btn">Show More...</a>  
 
-              </p>
             </div>
           </div>
+
+
         </div>
       </section>
-      <!-- End Experience section -->
-
-      <!-- Start About section -->
-
       <section id="about" class="content-section">
         <h2>About Me</h2>
         <div class="about-container">
@@ -179,15 +180,22 @@
           <div class="about-content">
             <h3>I build things for the platform, and engineer them to last.</h3>
             <p>
-              <p>Results-driven Software Engineer with 3 years of dedicated experience in a dynamic .NET development environment. I architected and developed a range of robust, cutting-edge applications, demonstrating mastery across the full Software Development Lifecycle (SDLC), from initial design to final deployment.</p>
-              <p>My core expertise is centered on the Microsoft stack. I expertly leverage C#, .NET, .NET Core, ASP.NET, Web APIs, and traditional WinForms to build high-performance systems. A key focus is on data efficiency: I actively managed and optimized complex relational data structures and SQL Server Job Agents using SQL Server, consistently enhancing system reliability and query performance.</p>
-              <p>Beyond coding, I am a strategic developer who pioneered the use of Agile methodologies (Scrum/Kanban) to significantly streamline team workflows, resulting in faster iteration cycles and improved product quality. I also contributed heavily to quality assurance by implementing unit and integration testing frameworks. My commitment is to ensure the delivery of maintainable, scalable, and well-documented code that directly supports business objectives.</p>
-            </p>
-
-            <a href="E:\Wasim\Structured Query Language.pdf" target="_blank" class="cta-button">
-              View My Resume <i class="fas fa-file-alt"></i>
-            </a>
-
+                <ul>
+        <li>Results-driven Software Engineer with <strong id="experience-years">3+</strong> years of dedicated experience in a dynamic .NET development environment. I architected and developed a range of robust, cutting-edge applications, demonstrating mastery across the full Software Development Lifecycle (SDLC), from initial design to final deployment.</li>
+        <span id="bio-ellipsis">...</span>
+        <span id="more-bio-text" class="hidden-bio">
+            <li>My core expertise is centered on the Microsoft stack. I expertly leverage C#, .NET, .NET Core, ASP.NET, Web APIs, and traditional WinForms to build high-performance systems. A key focus is on data efficiency: I actively managed and optimized complex relational data structures and SQL Server Job Agents using SQL Server, consistently enhancing system reliability and query performance.</li>
+              <li>Beyond coding, I am a strategic developer who pioneered the use of Agile methodologies (Scrum/Kanban) to significantly streamline team workflows, resulting in faster iteration cycles and improved product quality. I also contributed heavily to quality assurance by implementing unit and integration testing frameworks. My commitment is to ensure the delivery of maintainable, scalable, and well-documented code that directly supports business objectives.</li>
+        </span>
+        </ul>
+    </p>
+    
+    <a href="#" id="toggle-bio-btn" class="bio-toggle-link">Read More...</a>
+<br>
+            
+<button id="viewResumeBtn" class="cta-button">
+        View My Resume <i class="fas fa-file-alt"></i>
+    </button>
             <div class="social-links">
               <a href="https://www.instagram.com/wasim.k.1/" target="_blank" class="social-icon" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
@@ -208,10 +216,6 @@
         </div>
       </section>
 
-      <!-- End About section -->
-
-
-<!-- Start Contact Me section -->
       <section id="contact" class="content-section gray-bg">
         <h2>Get In Touch</h2>
         <div class="contact-container">
@@ -227,10 +231,6 @@
               <i class="fas fa-envelope"></i>
               <p>wasimkhan.official@outlook.com</p>
             </div>
-            <!-- <div class="info-item">
-              <i class="fas fa-phone"></i>
-              <p>+1 (555) 123-4567</p>
-            </div> -->
             <div class="info-item">
               <i class="fas fa-map-marker-alt"></i>
               <p>Sion, Mumbai, MH</p>
@@ -238,7 +238,7 @@
           </div>
 
           <div class="contact-form-container">
-            <form class="contact-form">
+            <form class="contact-form" method="post" >
               <input type="text" name="name" placeholder="Your Name" required />
               <input
                 type="email"
@@ -252,26 +252,30 @@
                 placeholder="Your Message"
                 required
               ></textarea>
-              <button type="submit" class="cta-button">
+              <button type="submit" class="cta-button" onclick="alertvisitor()">
                 Send Message <i class="fas fa-paper-plane"></i>
               </button>
+              
             </form>
           </div>
         </div>
       </section>
-<!-- End Contact Me section -->
-
-
-
-
-    </main>
+</main>
 
     <footer>
       <p>Wasim Khan</p>
       <p id="footer-year-change">&copy;</p>
-      <p>Mumbai</p>
+      
     </footer>
 
+    <div id="resumeModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img src="resume/Portfolio Wasim Khan online.png" alt="Wasim Khan resume">
+    </div>
+</div>
+
     <script src="script.js"></script>
+
   </body>
 </html>
