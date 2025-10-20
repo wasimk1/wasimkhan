@@ -209,6 +209,23 @@ main {
     z-index: 2;
 }
 
+/* START: New Styles for Static vs Carousel Mode */
+.hero-static {
+    background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.hero-static .carousel-container,
+.hero-static .carousel-toggle-btn {
+    display: none; /* Hide carousel elements in static mode */
+}
+
+.hero-carousel .carousel-container,
+.hero-carousel .carousel-toggle-btn {
+    display: flex; /* Ensure carousel elements are visible */
+}
+/* END: New Styles for Static vs Carousel Mode */
+
+
 .hero-intro {
     font-size: 1.2rem;
     color: #007bff;
@@ -896,4 +913,9 @@ footer {
 
 .toggle-duties-btn:hover {
     color: var(--accent-hover);
+}
+
+/* ADD THIS TO THE END OF YOUR CSS FILE */
+.hidden-by-toggle {
+    display: none !important;
 }

@@ -1,3 +1,18 @@
+// =======================================================
+// ==== "BACKEND" TOGGLE: SET TO 'true' FOR CAROUSEL, 'false' FOR STATIC IMAGE ====
+const useCarousel = true; 
+
+// --- SECTION VISIBILITY TOGGLE ---
+// Set any section to 'false' to hide it from the website.
+const sectionVisibility = {
+    skills: true,
+    experience: true,
+    about: true,
+    contact: true
+};
+// =======================================================
+
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -19,19 +34,49 @@ function closeMenu() {
 }
 
 
-//Date of year auto increment when year changes 
-var yearchange = document.getElementById("footer-year-change");
+//Date of year auto increment when year changes for footer
+var yearchangeforfooter = document.getElementById("footer-year-change");
 const date = new Date();
-var getyear = date.getFullYear().toString();
+var getyearforfooter = date.getFullYear().toString();
 
 //yearchange.innerHTML = "&copy;" + getyear +", Mumbai" ;
 
-var text = document.createTextNode(getyear +", All Rights Reserved. | Mumbai");
-yearchange.appendChild(text);
+var text = document.createTextNode("2022-"+getyearforfooter +" All Rights Reserved. | Mumbai");
+yearchangeforfooter.appendChild(text);
+//End Date of year auto increment when year changes for footer
+
+ // Starting date of your job
+    const jobstartDate = new Date('Oct 10, 2022');
+    const today = new Date();
+
+    function getYearMonthDifference(start, end) {
+      let startYear = start.getFullYear();
+      let startMonth = start.getMonth();
+      let endYear = end.getFullYear();
+      let endMonth = end.getMonth();
+
+      let years = endYear - startYear;
+      let months = endMonth - startMonth;
+
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      return { years, months };
+    }
+
+    const diff = getYearMonthDifference(jobstartDate, today);
+
+    // Format as "X" if no months, otherwise "X.Y"
+    let experienceFormatted = diff.months === 0 ? `${diff.years}` : `${diff.years}.${diff.months}`;
+
+    document.getElementById("jobyeareofxperience").textContent = experienceFormatted;//Landing page section
+    document.getElementById("about-jobyeareofxperience").textContent = experienceFormatted; //About me section
 
 
 
-// Typing Animation & Carousel
+// Typing Animation
 document.addEventListener('DOMContentLoaded', function() {
     // --- Typing Animation Logic (existing) ---
     const typingText = document.querySelector('.typing-text');
@@ -65,58 +110,65 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    // --- START: New Carousel Logic ---
-    const carouselContainer = document.querySelector('.carousel-container');
-    const slides = document.querySelectorAll('.carousel-slide');
+// --- START: Conditional Carousel Logic ---
+    const heroSection = document.querySelector('.hero');
     const toggleButton = document.getElementById('carousel-toggle');
 
-    // Make sure all carousel elements exist before running the script
-    if (carouselContainer && slides.length > 0 && toggleButton) {
-        const toggleIcon = toggleButton.querySelector('i');
-        let slideIndex = 0;
-        let isPaused = false;
-        let carouselInterval;
-        const totalSlides = slides.length;
-
-        function nextSlide() {
-            slideIndex = (slideIndex + 1) % totalSlides;
-            carouselContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
-        }
-
-        function playCarousel() {
-            isPaused = false;
-            if(toggleIcon) {
-                toggleIcon.classList.remove('fa-play');
-                toggleIcon.classList.add('fa-pause');
-            }
-            toggleButton.setAttribute('aria-label', 'Pause Carousel');
-            carouselInterval = setInterval(nextSlide, 4000); // Change slide every 5 seconds
-        }
-
-        function pauseCarousel() {
-            isPaused = true;
-            if(toggleIcon) {
-                toggleIcon.classList.remove('fa-pause');
-                toggleIcon.classList.add('fa-play');
-            }
-            toggleButton.setAttribute('aria-label', 'Play Carousel');
-            clearInterval(carouselInterval);
-        }
-
-        toggleButton.addEventListener('click', () => {
-            if (isPaused) {
-                playCarousel();
-            } else {
-                pauseCarousel();
-            }
-        });
+    if (useCarousel) {
+        // If carousel is ON, run the carousel logic
+        heroSection.classList.add('hero-carousel');
         
-        // Start the carousel automatically
-        playCarousel();
-    }
-    // --- END: New Carousel Logic ---
-});
+        const carouselContainer = document.querySelector('.carousel-container');
+        const slides = document.querySelectorAll('.carousel-slide');
 
+        if (carouselContainer && slides.length > 0 && toggleButton) {
+            const toggleIcon = toggleButton.querySelector('i');
+            let slideIndex = 0;
+            let isPaused = false;
+            let carouselInterval;
+            const totalSlides = slides.length;
+
+            function nextSlide() {
+                slideIndex = (slideIndex + 1) % totalSlides;
+                carouselContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+            }
+
+            function playCarousel() {
+                isPaused = false;
+                if(toggleIcon) {
+                    toggleIcon.classList.remove('fa-play');
+                    toggleIcon.classList.add('fa-pause');
+                }
+                toggleButton.setAttribute('aria-label', 'Pause Carousel');
+                carouselInterval = setInterval(nextSlide, 5000);
+            }
+
+            function pauseCarousel() {
+                isPaused = true;
+                if(toggleIcon) {
+                    toggleIcon.classList.remove('fa-pause');
+                    toggleIcon.classList.add('fa-play');
+                }
+                toggleButton.setAttribute('aria-label', 'Play Carousel');
+                clearInterval(carouselInterval);
+            }
+
+            toggleButton.addEventListener('click', () => {
+                if (isPaused) {
+                    playCarousel();
+                } else {
+                    pauseCarousel();
+                }
+            });
+            
+            playCarousel(); // Start the carousel
+        }
+    } else {
+        // If carousel is OFF, prepare for a static background
+        heroSection.classList.add('hero-static');
+    }
+    // --- END: Conditional Carousel Logic ---
+});
 
 // Resume Modal Logic
 const resumeModal = document.getElementById('resumeModal');
@@ -233,3 +285,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+ // --- UPDATED Section Toggling Logic ---
+    function toggleSections() {
+        for (const sectionId in sectionVisibility) {
+            if (Object.prototype.hasOwnProperty.call(sectionVisibility, sectionId)) {
+                const isVisible = sectionVisibility[sectionId];
+                const sectionElement = document.getElementById(sectionId);
+                const navLinkElement = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+                if (!isVisible) {
+                    // Hide the section by adding the CSS class
+                    if (sectionElement) {
+                        sectionElement.classList.add('hidden-by-toggle');
+                    }
+                    // Hide the nav link by adding the class to its parent <li>
+                    if (navLinkElement) {
+                        navLinkElement.parentElement.classList.add('hidden-by-toggle');
+                    }
+                }
+            }
+        }
+    }
+toggleSections(); // Run the function when the page loads
