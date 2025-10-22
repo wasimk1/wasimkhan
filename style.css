@@ -63,12 +63,19 @@ body {
     padding: 1.2rem 5%; /* UPDATED: Slightly more padding */
     max-width: 1200px;
     margin: 0 auto;
+    height: 80px; /* ADD THIS LINE */
 }
+/* Find this existing rule */
+
 
 .nav-logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: #333;
+}
+.nav-logo img {
+    height: 150px; /* Adjust this value to make your logo bigger or smaller */
+    width: auto;  /* This keeps the logo's proportions correct */
 }
 
 .nav-menu {

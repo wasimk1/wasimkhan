@@ -307,4 +307,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+
 toggleSections(); // Run the function when the page loads
