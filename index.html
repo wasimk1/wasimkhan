@@ -17,6 +17,9 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
     <link rel="icon" type="image/png" href="portfolio-website-logo/Portfolio-favicon.png">
+     <script src="footernyearchange.js" defer></script>
+    <script src="script.js" defer ></script>
+
   </head>
 
   <body>
@@ -67,7 +70,7 @@
             <p>I am a <span class="typing-text"></span></p>
           </div>
           <p class="hero-description anim">
-            Passionate Software Engineer based in Mumbai with <span id="jobyeareofxperience"></span> years of experience 
+            Passionate .NET Backend Developer based in Mumbai with <span id="jobyeareofxperience"></span> years of experience 
             in backend and full-stack development. | Tech Enthusiast.
           </p>
           <div class="hero-buttons anim">
@@ -265,20 +268,38 @@
       </section>
 </main>
 
-    <footer>
+    <!-- <footer>
       <p>Wasim Khan</p>
       <p id="footer-year-change">&copy;</p>
       
-    </footer>
+    </footer> -->
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-title">Wasim Khan</div>
+        <div class="footer-desc">
+            Passionate .NET Backend Developer — Building clean, scalable, and high-performance applications.
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/wasimk1" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/wasimk1" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/wasim.k.1/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/iwasimk1" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:wasimkhan.official@outlook.com" aria-label="Outlook Mail" ><i class="fa-solid fa-envelope"></i></a>
+        </>
+
+        <div class="footer-copy" id="footer-copy"></div>
+    </div>
+</footer>
 
     <div id="resumeModal" class="modal-overlay">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <img src="resume/Portfolio Wasim Khan online.png" alt="Wasim Khan resume">
+      <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <img src="resume/Portfolio Wasim Khan online.png" alt="Wasim Khan resume">
+      </div>
     </div>
-</div>
 
-    <script src="script.js"></script>
 
   </body>
 </html>

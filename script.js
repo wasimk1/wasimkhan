@@ -34,48 +34,6 @@ function closeMenu() {
 }
 
 
-//Date of year auto increment when year changes for footer
-var yearchangeforfooter = document.getElementById("footer-year-change");
-const date = new Date();
-var getyearforfooter = date.getFullYear().toString();
-
-//yearchange.innerHTML = "&copy;" + getyear +", Mumbai" ;
-
-var text = document.createTextNode("2022-"+getyearforfooter +" All Rights Reserved | Mumbai");
-yearchangeforfooter.appendChild(text);
-//End Date of year auto increment when year changes for footer
-
- // Starting date of your job
-    const jobstartDate = new Date('Oct 10, 2022');
-    const today = new Date();
-
-    function getYearMonthDifference(start, end) {
-      let startYear = start.getFullYear();
-      let startMonth = start.getMonth();
-      let endYear = end.getFullYear();
-      let endMonth = end.getMonth();
-
-      let years = endYear - startYear;
-      let months = endMonth - startMonth;
-
-      if (months < 0) {
-        years--;
-        months += 12;
-      }
-
-      return { years, months };
-    }
-
-    const diff = getYearMonthDifference(jobstartDate, today);
-
-    // Format as "X" if no months, otherwise "X.Y"
-    let experienceFormatted = diff.months === 0 ? `${diff.years}` : `${diff.years}.${diff.months}`;
-
-    document.getElementById("jobyeareofxperience").textContent = experienceFormatted;//Landing page section
-    document.getElementById("about-jobyeareofxperience").textContent = experienceFormatted; //About me section
-
-
-
 // Typing Animation
 document.addEventListener('DOMContentLoaded', function() {
     // --- Typing Animation Logic (existing) ---
