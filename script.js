@@ -41,7 +41,7 @@ var getyearforfooter = date.getFullYear().toString();
 
 //yearchange.innerHTML = "&copy;" + getyear +", Mumbai" ;
 
-var text = document.createTextNode("2022-"+getyearforfooter +" All Rights Reserved. | Mumbai");
+var text = document.createTextNode("2022-"+getyearforfooter +" All Rights Reserved | Mumbai");
 yearchangeforfooter.appendChild(text);
 //End Date of year auto increment when year changes for footer
 
