@@ -774,7 +774,7 @@ footer {
 
 /* Title */
 .footer-title {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 700;
     margin-bottom: 12px;
     color: #58a6ff;
@@ -783,7 +783,7 @@ footer {
 /* Description text */
 .footer-desc {
     font-size: 15px;
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto 25px;
     color: #a5b4c3;
 }
