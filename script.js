@@ -267,3 +267,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 toggleSections(); // Run the function when the page loads
+
+const days = [
+  "Sunday", "Monday", "Tuesday",
+  "Wednesday", "Thursday", "Friday", "Saturday"
+];
+
+const messages = {
+  Sunday: "Relax & recharge this Sunday 🌴",
+  Monday: "Start strong this Monday 💪",
+  Tuesday: "Have a great Tuesday 🚀",
+  Wednesday: "Happy Hump Day 🐪",
+  Thursday: "Almost there — Happy Thursday ✨",
+  Friday: "Cheers to Friday 🎉",
+  Saturday: "Enjoy your Saturday 😎"
+};
+
+const today = new Date();
+const dayName = days[today.getDay()];
+
+document.getElementById("greetingText").textContent = messages[dayName];
+
+// Header shrink on scroll
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    header.classList.toggle('scrolled', window.scrollY > 50);
+});

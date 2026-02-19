@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -17,6 +22,8 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
     <link rel="icon" type="image/png" href="portfolio-website-logo/Portfolio-favicon.png">
+    
+
      <script src="footernyearchange.js" defer></script>
     <script src="script.js" defer ></script>
 
@@ -28,7 +35,9 @@
       <nav class="navbar">
 
         <a href="#" class="nav-logo">
-        <img src="portfolio-website-logo/Portfolio logo - Wasim.png" alt="Wasim Khan Logo"></a>
+  <img src="portfolio-website-logo/Portfolio logo - Wasim.png" alt="Wasim Khan Logo">
+  <!-- <span class="logo-text">Wasim Khan</span> -->
+</a>
 
         <!-- <a href="#" class="nav-logo">Wasim Khan</a> -->
 
@@ -67,19 +76,35 @@
           <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop');"></div>
         </div>
         <div class="hero-content">
-          <p class="hero-intro anim">Hi, my name is</p>
-          <h1 class="hero-name anim">Wasim Khan.</h1>
-          <div class="hero-subtitle anim">
-            <p>I am a <span class="typing-text"></span></p>
-          </div>
-          <p class="hero-description anim">
-            Passionate .NET Backend Developer based in Mumbai with <span id="jobyeareofxperience"></span> years of experience 
-            in backend and full-stack development. | Tech Enthusiast.
-          </p>
-          <div class="hero-buttons anim">
-            <a href="#experience" class="cta-button secondary">View My Work Experience</a>
-            <a href="#contact" class="cta-button">Get In Touch <i class="fas fa-envelope"></i></a>
-          </div>
+          <p class="hero-intro anim">Hello, I'm</p>
+
+<h1 class="hero-name anim">
+  Wasim <span>Khan</span>
+</h1>
+
+<h2 class="hero-role anim">
+  Building <span>Scalable</span> & 
+  <span>High-Performance</span> .NET Applications
+</h2>
+
+<div class="hero-subtitle anim">
+  <p>I am a <span class="typing-text"></span></p>
+</div>
+
+<p class="hero-description anim">
+  Backend-focused Software Engineer with a passion for
+  clean architecture, optimized SQL systems, and 
+  production-ready APIs.
+</p>
+
+<div class="hero-tags anim">
+  <span>C#</span>
+  <span>.NET Core</span>
+  <span>Web API</span>
+  <span>SQL Server</span>
+  <span>Performance Optimization</span>
+</div>
+
         </div>
 
         <button id="carousel-toggle" class="carousel-toggle-btn" aria-label="Pause Carousel">
@@ -90,8 +115,57 @@
         </a>
       </section>
 
-      <section id="skills" class="content-section">
-                <h2>My Tech Stack</h2>
+      <!-- Skill section  -->
+
+<section id="skills" class="content-section">
+  <h2 class="skills-heading">
+    My <span>Tech Stack</span>
+  </h2>
+  <div class="skills-grid-layout">
+  <!-- BACKEND -->
+  <div class="skill-category">
+    <h3 class="category-title">Backend</h3>
+    <div class="skills-container">
+      <div class="skill-item"><i class="devicon-csharp-plain colored"></i><p>C#</p></div>
+      <div class="skill-item"><i class="devicon-dot-net-plain-wordmark"></i><p>.NET</p></div>
+      <div class="skill-item"><i class="devicon-dotnetcore-plain colored"></i><p>.NET Core</p></div>
+      <div class="skill-item"><img src="skill-logo/ASP.NET.png"><p>ASP.NET</p></div>
+      <div class="skill-item"><img src="skill-logo/ASP.NET MVC.jpg"><p>ASP.NET MVC</p></div>
+    </div>
+  </div>
+
+  <!-- FRONTEND -->
+  <div class="skill-category">
+    <h3 class="category-title">Frontend</h3>
+    <div class="skills-container">
+      <div class="skill-item"><i class="devicon-html5-plain colored"></i><p>HTML5</p></div>
+      <div class="skill-item"><i class="devicon-css3-plain colored"></i><p>CSS3</p></div>
+      <div class="skill-item"><i class="devicon-javascript-plain colored"></i><p>JavaScript</p></div>
+    </div>
+  </div>
+
+  <!-- DATABASE -->
+  <div class="skill-category">
+    <h3 class="category-title">Database</h3>
+    <div class="skills-container">
+      <div class="skill-item"><img src="skill-logo/Sql_Server.png"><p>SQL Server</p></div>
+    </div>
+  </div>
+
+  <!-- TOOLS -->
+  <div class="skill-category">
+    <h3 class="category-title">Tools</h3>
+    <div class="skills-container">
+      <div class="skill-item"><img src="skill-logo/Git.png"><p>Git</p></div>
+      <div class="skill-item"><img src="skill-logo/GitHub.png"><p>GitHub</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+      <!-- <section id="skills" class="content-section">
+                <h2 class="skills-heading"> My <span>Tech Stack</span> </h2>
                 <div class="skills-container">
                     <div class="skill-item"><i class="devicon-csharp-plain colored"></i><p>C#</p></div>
                     <div class="skill-item"><i class="devicon-dot-net-plain-wordmark"></i><p>.NET</p></div>
@@ -105,137 +179,264 @@
                     <div class="skill-item"><img src="skill-logo/Git.png" alt="Git"><p>Git</p></div>
                     <div class="skill-item"><img src="skill-logo/GitHub.png" alt="GitHub"><p>GitHub</p></div>
                 </div>
-      </section>
-
+      </section> -->
+<!-- Skill section End  -->
 
 <section id="experience" class="content-section gray-bg">
-        <h2>My Journey</h2>
+        <h2 class="experience-heading">
+  My <span>Journey till now</span>
+</h2>
 
         <div class="timeline">
 
           <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Software Engineer</h3>
-              <div class="experience-info">
-                <span class="company">Suntech Business Solutions</span>
-                <p class="experience-location">
-                    <i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra
-                </p>
-                <span class="date">Jan 2024 - Present</span>
-              </div>
-              <ul>
-                <li>Led the complete lifecycle development of a tailored ERP software solution for the Jewellery industry, achieving an 80% surge in manufacturing efficiency.</li>
-                <li>Enhanced production screen endpoint performance by 20% through the strategic implementation of MemoryCache and optimized LINQ queries, significantly elevating system efficiency, and user experience.</li>
-                <li class="extra-duty hidden-duty">Streamlined backend operations by optimizing complex database queries, stored procedures, and managing SQL Server Agent Jobs, resulting in a 40% reduction in data loading time and fortified system stability.</li>
-                <li class="extra-duty hidden-duty">Facilitated seamless collaboration with cross-functional product, QA, and design teams to meticulously define functional requirements and swiftly resolve high-priority issues, accelerating resolution times by 50% and fortifying overall system stability.</li> 
-            </ul>
-                <a href="#" class="toggle-duties-btn">Show More...</a>  
+<div class="timeline-content">
 
-            </div>
+  <div class="experience-layout">
+
+    <!-- LEFT SIDE -->
+    <div class="experience-details">
+
+      <h3>Software Engineer</h3>
+
+      <div class="experience-info">
+        <span class="company">Suntech Business Solutions</span>
+        <span class="date">Jan 2024 - Present</span>
+      </div>
+
+      <p class="experience-location">
+        <i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra
+      </p>
+
+      <ul class="experience-points">
+        <li>Led ERP development for Jewellery industry</li>
+        <li>Optimized SQL queries & backend endpoints</li>
+        <li>Improved deployment reliability & stability</li>
+      </ul>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="experience-impact">
+
+      <div class="impact-box">
+        <h4>+80%</h4>
+        <p>Manufacturing Efficiency</p>
+      </div>
+
+      <div class="impact-box">
+        <h4>+20%</h4>
+        <p>Endpoint Performance</p>
+      </div>
+
+      <div class="impact-box">
+        <h4>-40%</h4>
+        <p>Data Loading Time</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
           </div>
 
 
 
           <div class="timeline-item">
             <div class="timeline-content">
-              <h3>Software Developer</h3>
-              <div class="experience-info">
-                <span class="company">Tata Consultancy Services</span>
-                <p class="experience-location">
-                    <i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra
-                </p>
-                <span class="date">Feb 2023 - Jan 2024</span>
-              </div>
-              <ul>
-               <li>Delivered a ground-up development of a Clone Product for policies for a leading insurance company, driving a 50% increase in policy processing speed, directly contributing to business success.</li>
-               <li class="extra-duty hidden-duty">Utilized cutting-edge technologies like Azure and modern frameworks, and stacks including C#, VB.NET, ASP.NET, and WCF services to ensure scalability and high-performance resulting in enhancement of software capabilities by enabling real-time data processing.</li>
-               <li class="extra-duty hidden-duty">Collaborated with cross-functional teams, including business analysts and testers, to ensure the successful and timely delivery of projects, consistently meeting deadlines and stakeholder expectations.</li>
-            </ul>
-             <a href="#" class="toggle-duties-btn">Show More...</a>  
 
-            </div>
-          </div>
+  <div class="experience-layout">
+
+    <!-- LEFT SIDE -->
+    <div class="experience-details">
+
+      <h3>Software Developer</h3>
+
+      <div class="experience-info">
+        <span class="company">Tata Consultancy Services</span>
+        <span class="date">Feb 2023 - Jan 2024</span>
+      </div>
+
+      <p class="experience-location">
+        <i class="fas fa-map-marker-alt"></i> Thane, Maharashtra
+      </p>
+
+      <ul class="experience-points">
+        <li>Developed policy clone product</li>
+        <li>Utilized ASP.NET and Azure for scalable processing</li>
+        <li>Collaborated with teams to ensure timely delivery</li>
+      </ul>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="experience-impact">
+
+      <div class="impact-box">
+        <h4>+50%</h4>
+        <p>Policy processing speed</p>
+      </div>
+
+      <div class="impact-box">
+        <h4>+30%</h4>
+        <p>Optimization Performance</p>
+      </div>
+
+      <div class="impact-box">
+        <h4>Real-Time</h4>
+        <p>Data Processing</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
 
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Graduate Trainee</h3>
-              <div class="experience-info">
-                <span class="company">Tata Consultancy Services</span>
-                <p class="experience-location">
-                    <i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu
-                </p>
-                <span class="date">Oct 2022 - Feb 2023</span>
-              </div>
-              <ul>
-                <li>Actively participated in brainstorming sessions, workshops, and training programs to stay updated with emerging trends and best practices in software development.</li>
-                <li class="extra-duty hidden-duty">Build a 3D game (Maze VR) for the organization as an incubator project at the end of the Trainee.</li>
-                <li class="extra-duty hidden-duty">Technology used: Unity3D Engine and C#</li>
-            </ul>     
-             <a href="#" class="toggle-duties-btn">Show More...</a>  
-
-            </div>
-          </div>
-
-
-        </div>
-      </section>
-      <section id="about" class="content-section">
-        <h2>About Me</h2>
-        <div class="about-container">
-          <div class="about-image">
-            <img src="about-photo/WasimKhan.png" alt="A professional headshot of Wasim Khan" />
-          </div>
-          <div class="about-content">
-            <h3>I build things for the platform, and engineer them to last.</h3>
-            <p>
-                <ul>
-        <li>Results-driven Software Engineer with <span id="about-jobyeareofxperience"></span> years of dedicated experience in a dynamic .NET development environment. I architected and developed a range of robust, cutting-edge applications, demonstrating mastery across the full Software Development Lifecycle (SDLC), from initial design to final deployment.</li>
-        <span id="bio-ellipsis">...</span>
-        <span id="more-bio-text" class="hidden-bio">
-            <li>My core expertise is centered on the Microsoft stack. I expertly leverage C#, .NET, .NET Core, ASP.NET, Web APIs, and traditional WinForms to build high-performance systems. A key focus is on data efficiency: I actively managed and optimized complex relational data structures and SQL Server Job Agents using SQL Server, consistently enhancing system reliability and query performance.</li>
-              <li>Beyond coding, I am a strategic developer who pioneered the use of Agile methodologies (Scrum/Kanban) to significantly streamline team workflows, resulting in faster iteration cycles and improved product quality. I also contributed heavily to quality assurance by implementing unit and integration testing frameworks. My commitment is to ensure the delivery of maintainable, scalable, and well-documented code that directly supports business objectives.</li>
-        </span>
-        </ul>
-    </p>
-    
-    <a href="#" id="toggle-bio-btn" class="bio-toggle-link">Read More...</a>
-<br>
             
-<button id="viewResumeBtn" class="cta-button">
-        View My Resume <i class="fas fa-file-alt"></i>
-    </button>
-            <div class="social-links">
-              <a href="https://www.instagram.com/wasim.k.1/" target="_blank" class="social-icon" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://x.com/iwasimk1" target="_blank" class="social-icon" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/wasimk1" target="_blank" class="social-icon" aria-label="LinkedIn" >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="https://github.com/wasimk1" target="_blank" class="social-icon" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
+
+            
+          </div>
+
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+
+
+             <div class="timeline-content">
+
+  <div class="experience-layout">
+
+    <!-- LEFT SIDE -->
+    <div class="experience-details">
+
+      <h3>Graduate Trainee</h3>
+
+      <div class="experience-info">
+        <span class="company">Tata Consultancy Services</span>
+        <span class="date">Oct 2022 - Feb 2023</span>
+      </div>
+
+      <p class="experience-location">
+        <i class="fas fa-map-marker-alt"></i> Chennai, Tamil Nadu
+      </p>
+
+      <ul class="experience-points">
+        <li>Engaged in training on emerging software trends</li>
+        <li>Built Maze VR game as trainee project</li>
+        <li>Backend Tech: C#</li>
+      </ul>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="experience-impact">
+
+      <div class="impact-box">
+        <h4>VR</h4>
+        <p>Game Development</p>
+      </div>
+
+      <div class="impact-box">
+        <h4>Unity3D Engine</h4>
+        <p>Technology used</p>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
             </div>
           </div>
         </div>
       </section>
+
+
+
+
+      <!-- Start About me -->
+ <section id="about" class="content-section about-upgrade">
+  <!-- <h2 class="section-heading">About <span>Me</span></h2> -->
+   <h2 class="about-heading">
+    About <span>Me</span>
+</h2>
+
+  <div class="about-container">
+    
+    <div class="about-image">
+      <div class="image-wrapper">
+        <img src="about-photo/WasimKhan.png" alt="Wasim Khan">
+      </div>
+    </div>
+
+    <div class="about-content">
+
+      <!-- <h3 class="tagline">
+        From infinite coffee comes infinite code ☕
+      </h3> -->
+
+      <h3 class="tagline">
+  From infinite <span class="coffee">coffee</span> comes infinite 
+  <span class="code">code</span>
+</h3>
+
+      <div class="about-card">
+        <p>
+          I’m a <span class="highlight">Full Stack .NET Developer</span> who believes
+          great code should be clean, efficient, and dependable.
+          Over the past <span id="about-jobyeareofxperience"></span> years,
+          I’ve worked deeply within the .NET ecosystem crafting
+          <span class="highlight">C#, .NET Core & SQL Server</span> solutions.
+        </p>
+
+        <p>
+          I design scalable Web APIs, optimize complex SQL queries,
+          and build backend systems that stay stable under real-world load.
+          My goal is simple —
+          <span class="highlight">smooth deployments, zero surprises.</span>
+        </p>
+      </div>
+
+      <div class="about-highlights">
+        <div class="highlight-box">⚡ Scalable APIs</div>
+        <div class="highlight-box">🧠 SQL Optimization</div>
+        <div class="highlight-box">🚀 Performance Focused</div>
+        <div class="highlight-box">🔐 Secure Architecture</div>
+      </div>
+
+      <button id="viewResumeBtn" class="cta-button">
+        View My Resume <i class="fas fa-file-alt"></i>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+   
+
+<!-- End About me -->
 
       <section id="contact" class="content-section gray-bg">
-        <h2>Get In Touch</h2>
+        <h2 class="contact-heading">
+  Let’s <span>Connect</span>
+</h2>
+
         <div class="contact-container">
           <div class="contact-info">
-            <h3>Let's Connect</h3>
-            <p>
-              I am actively seeking impactful roles leveraging the Full Stack .NET. 
-              Actively exploring opportunities where my expertise in .NET Core, C#, and Azure can drive scalable solutions. 
-              For detailed inquiries about my experience or to discuss potential roles, 
-              please reach out directly - my inbox is open for a formal introduction.
-            </p>
+            <p class="contact-description">
+  I'm actively exploring impactful opportunities in 
+  <strong>.NET Backend & Full Stack Development</strong>.  
+
+  If you’re looking for someone who builds scalable APIs,
+  optimizes performance, and delivers production-ready systems —
+  let’s talk.
+</p>
+
             <div class="info-item">
               <i class="fas fa-envelope"></i>
               <p><a href="mailto:wasimkhan.official@outlook.com"> wasimkhan.official@outlook.com </a></p>
@@ -285,10 +486,10 @@
             <a href="https://www.instagram.com/wasim.k.1/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://x.com/iwasimk1" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             <a href="mailto:wasimkhan.official@outlook.com" aria-label="Outlook Mail" ><i class="fa-solid fa-envelope"></i></a>
-        </>
+        </div>
 
-        <div class="footer-copy" id="footer-copy"></div>
-    </div>
+        <div class="footer-copy" id="footer-copy"></div> 
+        <div> <p class="footer-greeting" id="greetingText"> Have a great day! 🚀</p></div>
 </footer>
 <!-- End Footer section -->
 
