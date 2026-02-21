@@ -1816,10 +1816,11 @@ section {
 /* ===== TYPING TEXT STYLE ===== */
 
 .typing-text {
-    font-family: 'Cascadia Code', monospace; /* developer font */
-    color: #0051a8;      /* blue color */
-    font-weight: 700;
-    font-style:inherit;
+    /*font-family: 'Cascadia Code', monospace;  developer font */
+    font-family: "Shantell Sans", cursive;
+    color: #002c5a;      /* blue color */
+    font-weight: 800;
+    font-style:normal;
     letter-spacing: 1px;
 }
 
@@ -1828,7 +1829,7 @@ section {
     content: '|';
     margin-left: 4px;
     animation: blinkCursor 0.8s infinite;
-    color: #007bff;
+    color: #000000;
 }
 
 @keyframes blinkCursor {
