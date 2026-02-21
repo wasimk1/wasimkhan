@@ -10,7 +10,7 @@ html {
 }
 
 section[id] {
-    scroll-margin-top: 30px; /* Adjust this value if needed */
+    scroll-margin-top: 90px; /* Adjust this value if needed */
 }
 /* End Master section of the website */
 
@@ -72,15 +72,31 @@ body {
 
 
 .nav-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #333;
+    display: flex;
+    align-items: center;
+     height: 80px;
+    min-width: 140px;   /* IMPORTANT */
 }
 .nav-logo img {
-    height: 150px; /* Adjust this value to make your logo bigger or smaller */
-    width: auto;  /* This keeps the logo's proportions correct */
+    height: 55px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
 }
 
+@media (max-width: 768px) {
+    .nav-logo img {
+        height: 42px;
+    }
+}
+.nav-logo img {
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover img {
+    transform: scale(1.05);
+}
 .nav-menu {
     display: flex;
     align-items: center;
@@ -416,7 +432,7 @@ main {
 .content-section {
     max-width: 1000px; /* Sets the maximum width of the content */
     margin: 0 auto;     /* Centers the content horizontally */
-    padding: 4rem 5%;   /* Keeps your vertical and side padding */
+    padding: 2rem 5%;   /* Keeps your vertical and side padding */
     overflow: hidden;   /* Prevents any potential overflow issues */
 }
 
@@ -432,9 +448,9 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 120px; /* Fixed width for uniformity */
-    height: 120px; /* Fixed height for uniformity */
-    padding: 1rem;
+    width: 90px; /* Fixed width for uniformity */
+    height: 90px; /* Fixed height for uniformity */
+    padding: 0.6rem;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -447,13 +463,13 @@ main {
 }
 
 .skill-item i {
-    font-size: 3.5rem; /* Makes the icon larger */
+    font-size: 2.6rem; /* Makes the icon larger */
     margin-bottom: 0.5rem;
 }
 
 .skill-item img {
-    width: 5.5rem;   /* Controls the width of your image */
-    height: 5.5rem;  /* Controls the height of your image */
+    width: 3rem;   /* Controls the width of your image */
+    height: 3rem;  /* Controls the height of your image */
     margin-bottom: 0.5rem;
 }
 .skill-item p {
@@ -1273,7 +1289,7 @@ footer {
 
 /* Upgrade Skill Grid */
 .skills-container {
-    gap: 2rem !important;
+    gap: 0.8rem !important;
 }
 
 /* Premium Skill Card */
@@ -1333,7 +1349,8 @@ footer {
 /* ===== SKILL CATEGORY STYLING ===== */
 
 .skill-category {
-    margin-bottom: 3.5rem;
+    /* margin-bottom: 0.5rem; */
+    padding: 0.1rem;
 }
 
 .category-title {
@@ -1792,4 +1809,13 @@ footer {
 .header.scrolled {
     padding: 0.5rem 0;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+.content-section h2 {
+    margin-bottom: 2rem;
+}
+section {
+    margin-bottom: 0;
+}
+section {
+    margin-bottom: 0;
 }
