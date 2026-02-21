@@ -272,13 +272,7 @@ main {
     margin-bottom: 1.5rem;
 }
 
-/* Typing text cursor */
-.typing-text::after {
-    content: '|';
-    animation: blink 0.7s infinite;
-    font-weight: bold;
-    color: #333;
-}
+
 
 .hero-description {
     font-size: 1.1rem;
@@ -1818,4 +1812,25 @@ section {
 }
 section {
     margin-bottom: 0;
+}
+/* ===== TYPING TEXT STYLE ===== */
+
+.typing-text {
+    font-family: 'Cascadia Code', monospace; /* developer font */
+    color: #0051a8;      /* blue color */
+    font-weight: 700;
+    font-style:inherit;
+    letter-spacing: 1px;
+}
+
+/* Cursor style */
+.typing-text::after {
+    content: '|';
+    margin-left: 4px;
+    animation: blinkCursor 0.8s infinite;
+    color: #007bff;
+}
+
+@keyframes blinkCursor {
+    50% { opacity: 0; }
 }
