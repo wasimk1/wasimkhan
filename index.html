@@ -23,7 +23,7 @@
     />
     <link rel="icon" type="image/png" href="portfolio-website-logo/Portfolio-favicon.png">
     
-
+      <script src="configs/resume-config.js"></script>
      <script src="footernyearchange.js" defer></script>
     <script src="script.js" defer ></script>
 
@@ -419,12 +419,30 @@
 </footer>
 <!-- End Footer section -->
 
-    <div id="resumeModal" class="modal-overlay">
-      <div class="modal-content">
-          <span class="close-button">&times;</span>
-          <img src="resume/Portfolio Wasim Khan online.png" alt="Wasim Khan resume">
-      </div>
+ <div id="resumeModal" class="resume-modal">
+  <div class="resume-modal-content">
+
+    <span class="resume-close">
+      <i class="fas fa-times"></i>
+    </span>
+
+    <!-- Loading Spinner -->
+    <div class="resume-loader" id="resumeLoader">
+      <div class="spinner"></div>
+      <p>Loading Resume...</p>
     </div>
+
+    <iframe 
+      id="resumeFrame"
+      src=""
+      frameborder="0"
+      allow="autoplay"
+      sandbox="allow-scripts allow-same-origin"
+    ></iframe>
+
+  </div>
+</div>
+
 <div id="successPopup" class="success-popup">
   <div class="success-box">
     <i class="fas fa-check-circle"></i>

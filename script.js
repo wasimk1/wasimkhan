@@ -128,35 +128,72 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- END: Conditional Carousel Logic ---
 });
 
-// Resume Modal Logic
-const resumeModal = document.getElementById('resumeModal');
-const viewResumeBtn = document.getElementById('viewResumeBtn');
-const closeBtn = document.querySelector('.close-button');
+//for resume dynamic view from google drive
+document.addEventListener("DOMContentLoaded", function () {
 
-// Function to open the modal
-function openModal() {
-    resumeModal.style.display = 'flex';
-}
+    const resumeBtn = document.getElementById("viewResumeBtn");
+    const resumeModal = document.getElementById("resumeModal");
+    const resumeClose = document.querySelector(".resume-close");
+    const resumeFrame = document.getElementById("resumeFrame");
+    const resumeLoader = document.getElementById("resumeLoader");
 
-// Function to close the modal
-function closeModal() {
-    resumeModal.style.display = 'none';
-}
+    if (!resumeBtn) return;
 
-// Event listeners
-viewResumeBtn.addEventListener('click', openModal);
-closeBtn.addEventListener('click', closeModal);
+    resumeBtn.addEventListener("click", function () {
 
-// Close modal if user clicks on the overlay
-window.addEventListener('click', (event) => {
-    if (event.target === resumeModal) {
-        closeModal();
+        if (!window.RESUME_FILE_ID_ENCODED || window.RESUME_FILE_ID_ENCODED.trim() === "") {
+            alert("Resume is currently unavailable.");
+            return;
+        }
+
+        // 🔐 Decode Base64 ID dynamically
+        let decodedFileId = "";
+        try {
+            decodedFileId = atob(window.RESUME_FILE_ID_ENCODED);
+        } catch (err) {
+            alert("Resume configuration error.");
+            return;
+        }
+
+        const resumeURL =
+            window.RESUME_BASE_URL +
+            decodedFileId +
+            window.RESUME_PREVIEW_SUFFIX;
+
+        resumeModal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+
+        resumeLoader.style.display = "flex";
+        resumeFrame.style.opacity = "0";
+
+        resumeFrame.src = resumeURL;
+
+        resumeFrame.onload = function () {
+            resumeLoader.style.display = "none";
+            resumeFrame.style.opacity = "1";
+        };
+    });
+
+    function closeModal() {
+        resumeModal.style.display = "none";
+        resumeFrame.src = "";
+        document.body.style.overflow = "auto";
     }
+
+    resumeClose.addEventListener("click", closeModal);
+
+    window.addEventListener("click", function (e) {
+        if (e.target === resumeModal) {
+            closeModal();
+        }
+    });
+
+    // Disable right click inside modal
+    resumeModal.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    });
 });
 
-function alertvisitor(){
-    alert("Thank you, will get back to you soon!.");
-}
 
 
 // Smooth scrolling without changing the URL
