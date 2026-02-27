@@ -100,7 +100,8 @@
         <div class="hero-tags anim">
           <span>C#</span>
           <span>.NET Core</span>
-          <span>Web API</span>
+          <span>ASP.NET Core Web API</span>
+          <span>RESTful API</span>
           <span>SQL Server</span>
           <span>Performance Optimization</span>
         </div>
@@ -163,24 +164,6 @@
 </div>
 </section>
 
-
-      <!-- <section id="skills" class="content-section">
-                <h2 class="skills-heading"> My <span>Tech Stack</span> </h2>
-                <div class="skills-container">
-                    <div class="skill-item"><i class="devicon-csharp-plain colored"></i><p>C#</p></div>
-                    <div class="skill-item"><i class="devicon-dot-net-plain-wordmark"></i><p>.NET</p></div>
-                    <div class="skill-item"><i class="devicon-dotnetcore-plain colored"></i><p>.NET Core</p></div>
-                    <div class="skill-item"><img src="skill-logo/ASP.NET.png" alt="Asp.NET"><p>ASP.NET</p></div>
-                    <div class="skill-item"><img src="skill-logo/ASP.NET MVC.jpg" alt="Asp.NET MVC"><p>ASP.NET MVC</p></div>
-                    <div class="skill-item"><img src="skill-logo/Sql_Server.png" alt="Sql Server"><p>SQL Server</p></div>
-                    <div class="skill-item"><i class="devicon-javascript-plain colored"></i></i><p>JavaScript</p></div>
-                    <div class="skill-item"><i class="devicon-html5-plain colored"></i><p>HTML5</p></div>
-                    <div class="skill-item"><i class="devicon-css3-plain colored"></i><p>CSS3</p></div>
-                    <div class="skill-item"><img src="skill-logo/Git.png" alt="Git"><p>Git</p></div>
-                    <div class="skill-item"><img src="skill-logo/GitHub.png" alt="GitHub"><p>GitHub</p></div>
-                </div>
-      </section> -->
-<!-- Skill section End  -->
 
 <section id="experience" class="content-section gray-bg">
         <h2 class="experience-heading">
@@ -304,8 +287,17 @@
 
 
         </div>
+<div class="experience-toggle-wrapper">
+  <button id="toggleExperienceBtn" class="cta-button secondary">
+    <span class="btn-text"></span>
+    <i class="fas fa-chevron-down toggle-icon"></i>
+  </button>
+</div>
       </section>
       <!-- Start About me -->
+
+
+
  <section id="about" class="content-section about-upgrade">
   <!-- <h2 class="section-heading">About <span>Me</span></h2> -->
    <h2 class="about-heading">
@@ -396,21 +388,9 @@
           <div class="contact-form-container">
             <form class="contact-form" method="post" >
               <input type="text" name="name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                name="message"
-                rows="5"
-                placeholder="Your Message"
-                required
-              ></textarea>
-              <button type="submit" class="cta-button" onclick="alertvisitor()">
-                Send Message <i class="fas fa-paper-plane"></i>
-              </button>
+              <input type="email" name="email" placeholder="Your Email" required />
+              <textarea name="message"rows="5" placeholder="Your Message" required ></textarea>
+              <button type="submit" class="cta-button"> Send Message <i class="fas fa-paper-plane"></i> </button>
               
             </form>
           </div>
@@ -445,7 +425,13 @@
           <img src="resume/Portfolio Wasim Khan online.png" alt="Wasim Khan resume">
       </div>
     </div>
-
+<div id="successPopup" class="success-popup">
+  <div class="success-box">
+    <i class="fas fa-check-circle"></i>
+    <h3>Message Sent Successfully!</h3>
+    <p>Thank you for reaching out. I’ll get back to you soon.</p>
+  </div>
+</div>
 
   </body>
 </html>

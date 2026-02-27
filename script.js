@@ -293,3 +293,108 @@ window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
     header.classList.toggle('scrolled', window.scrollY > 50);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const timelineItems = document.querySelectorAll(".timeline-item");
+    const toggleBtn = document.getElementById("toggleExperienceBtn");
+    const btnText = toggleBtn?.querySelector(".btn-text");
+    const icon = toggleBtn?.querySelector(".toggle-icon");
+    const experienceSection = document.getElementById("experience");
+
+    if (timelineItems.length > 1 && toggleBtn) {
+
+        const hiddenCount = timelineItems.length - 1;
+
+        // Initial collapse
+        for (let i = 1; i < timelineItems.length; i++) {
+            timelineItems[i].classList.add("collapsed");
+        }
+
+        // Set initial dynamic text
+        btnText.textContent = `Show ${hiddenCount} More Experience${hiddenCount > 1 ? 's' : ''}`;
+
+        toggleBtn.addEventListener("click", function () {
+
+            const isCollapsed = timelineItems[1].classList.contains("collapsed");
+
+            for (let i = 1; i < timelineItems.length; i++) {
+                timelineItems[i].classList.toggle("collapsed");
+            }
+
+            if (isCollapsed) {
+                btnText.textContent = "Show Less";
+                icon.classList.add("rotate");
+            } else {
+                btnText.textContent = `Show ${hiddenCount} More Experience${hiddenCount > 1 ? 's' : ''}`;
+                icon.classList.remove("rotate");
+
+                // Scroll back smoothly after collapse animation
+                setTimeout(() => {
+                    experienceSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }, 400);
+            }
+        });
+    }
+});
+
+
+// for visitor who visit the website and contacted with me 
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector(".contact-form");
+    const popup = document.getElementById("successPopup");
+
+    if (form) {
+        form.addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            const name = form.querySelector('input[name="name"]');
+            const email = form.querySelector('input[name="email"]');
+            const message = form.querySelector('textarea[name="message"]');
+
+            let isValid = true;
+
+            // Reset previous errors
+            [name, email, message].forEach(input => {
+                input.classList.remove("input-error");
+            });
+
+            // Name validation
+            if (name.value.trim().length < 3) {
+                name.classList.add("input-error");
+                isValid = false;
+            }
+
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email.value.trim())) {
+                email.classList.add("input-error");
+                isValid = false;
+            }
+
+            // Message validation
+            if (message.value.trim().length < 5) {
+                message.classList.add("input-error");
+                isValid = false;
+            }
+
+            if (!isValid) return;
+
+            // Show success popup
+            popup.style.display = "flex";
+
+            // Clear form
+            form.reset();
+
+            // Auto close popup
+            setTimeout(() => {
+                popup.style.display = "none";
+            }, 5000);
+        });
+    }
+});
