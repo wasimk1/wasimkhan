@@ -7,10 +7,12 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 88%;
 }
 
+
 section[id] {
-    scroll-margin-top: 90px; /* Adjust this value if needed */
+    scroll-margin-top: 70px; /* Adjust this value if needed */
 }
 /* End Master section of the website */
 
@@ -63,10 +65,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 5%; /* UPDATED: Slightly more padding */
+    padding: 0.9rem 5%; /* UPDATED: Slightly more padding */
     max-width: 1200px;
     margin: 0 auto;
-    height: 80px; /* ADD THIS LINE */
+    height: 68px; /* ADD THIS LINE */
 }
 /* Find this existing rule */
 
@@ -74,11 +76,11 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-     height: 80px;
+     height: 60px;
     min-width: 140px;   /* IMPORTANT */
 }
 .nav-logo img {
-    height: 55px;
+    height: 44px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
@@ -1810,9 +1812,15 @@ footer {
     box-shadow: 0 12px 25px rgba(0, 123, 255, 0.4);
 }
 
-.header.scrolled {
-    padding: 0.5rem 0;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+.header.scrolled .navbar {
+    height: 55px;          /* smaller when scrolling */
+    padding: 0.6rem 5%;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .nav-logo img {
+    height: 38px;          /* smaller logo */
+    transition: all 0.3s ease;
 }
 .content-section h2 {
     margin-bottom: 2rem;
@@ -2095,4 +2103,44 @@ section {
 @keyframes scaleIn {
     from { transform: scale(0.9); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+}
+
+/* ===== APPLE STYLE GLASS SHRINK HEADER ===== */
+
+.header {
+    transition: all 0.35s ease;
+}
+
+/* Default state (top of page) */
+.navbar {
+    height: 64px;
+    padding: 0.9rem 5%;
+    transition: all 0.35s ease;
+}
+
+.nav-logo img {
+    height: 44px;
+    transition: all 0.35s ease;
+}
+
+/* When scrolled */
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.header.scrolled .navbar {
+    height: 52px;
+    padding: 0.5rem 5%;
+}
+
+.header.scrolled .nav-logo img {
+    height: 34px;
+}
+
+/* Slightly tighten nav links */
+.header.scrolled .nav-link {
+    font-size: 0.95rem;
 }

@@ -1,17 +1,5 @@
-// =======================================================
-// ==== "BACKEND" TOGGLE: SET TO 'true' FOR CAROUSEL, 'false' FOR STATIC IMAGE ====
-const useCarousel = true; 
-
-// --- SECTION VISIBILITY TOGGLE ---
-// Set any section to 'false' to hide it from the website.
-const sectionVisibility = {
-    skills: true,
-    experience: true,
-    about: true,
-    contact: true
-};
-// =======================================================
-
+const useCarousel = window.APP_CONFIG?.useCarousel ?? false;
+const sectionVisibility = window.APP_CONFIG?.sections ?? {};
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -435,3 +423,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
