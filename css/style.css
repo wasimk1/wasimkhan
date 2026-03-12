@@ -1656,7 +1656,7 @@ footer {
     color: white;
 }
 
-.info-item:hover i {
+.info-item:hover i, .info-item:hover p {
     color: white;
 }
 
