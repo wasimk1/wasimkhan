@@ -1,0 +1,22 @@
+
+# .NET build files
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+
+# Node.js dependencies
+node_modules/
+
+# Angular build output
+dist/
+
+# Environment and secrets
+.env
+appsettings.Development.json
+
+# Logs
+*.log
