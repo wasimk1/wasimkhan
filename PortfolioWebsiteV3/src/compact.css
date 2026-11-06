@@ -1,0 +1,120 @@
+/* Compact rhythm while preserving comfortable reading and touch targets. */
+.section { padding-block: 64px; }
+.section h2 { font-size: clamp(28px,3vw,40px); margin-bottom: 18px; }
+.section .eyebrow { margin-bottom: 14px; }
+.heading-row { margin-bottom: 27px; }
+.heading-row h2 { margin-bottom: 0; }
+.hero { min-height: 670px; padding-top: 34px; padding-bottom: 78px; gap: 55px; }
+.hero h1 { font-size: clamp(74px,7vw,98px); margin-bottom: 24px; }
+.hero-eyebrow { margin-bottom: 20px; }
+.hello { font-size: 19px; }
+.hero-description { margin-bottom: 20px; line-height: 1.75; }
+.hero-connect { margin-top: 19px; }
+.hero-art { height: 455px; }
+.portrait-word { top: 75px; font-size: 80px; }
+.hero-art .art-image { top: 110px; }
+.experience-stamp { top: 130px; width: 100px; height: 100px; }
+.experience-stamp strong { font-size: 38px; }
+.code-note { bottom: -20px; }
+.code-note-body { padding: 12px 20px 15px; font-size: 11px; }
+.expertise-band { padding-block: 18px; }
+.expertise-band strong { font-size: 21px; }
+.about-layout, .contact-layout { gap: 50px; }
+.value-card { padding-block: 18px; }
+.value-icon { margin-bottom: 10px; }
+.about-signoff { margin-top: 18px; }
+.experience-card { padding: 22px 25px; }
+.company-heading { padding-bottom: 16px; }
+.company-roles { padding-top: 18px; }
+.multiple-roles .company-role:not(:last-child) { padding-bottom: 23px; }
+.projects-grid { gap: 22px; }
+.projects-grid > app-project-card:nth-child(-n+2) .project-preview { height: 255px; padding-top: 20px; }
+.project-preview { height: 210px; }
+.project-body { min-height: 0; padding: 20px; }
+.project-body > p { font-size: 14px; line-height: 1.8; }
+.projects-grid > app-project-card:nth-child(-n+2) .project-title-row h3 { font-size: 21px; }
+.project-title-row h3 { font-size: 17px; }
+.project-tags { margin-top: 12px; margin-bottom: 14px; }
+.contact-form { padding: 26px; }
+.contact-form h3 { margin-bottom: 20px; }
+.field { margin-bottom: 13px; }
+.field textarea { min-height: 100px; }
+.footer { padding-top: 38px; }
+.footer-top { padding-bottom: 25px; }
+/* Four compact categories, all sixteen technologies visible without tabs. */
+.skills-section .heading-row > p { color: var(--color-dark); }
+.skill-categories { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.skill-category { padding: 20px 22px; border-radius: 10px; background: var(--color-background); border: 1px solid var(--color-border); }
+.category-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.category-heading > app-icon { color: var(--sage-ink); font-size: 20px; }
+.category-heading h3 { font-size: 16px; margin: 0; }
+.category-heading > span { margin-left: auto; font-size: 12px; color: var(--color-text-secondary); }
+.skill-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
+.skill-tags li { background: var(--color-surface); color: var(--color-dark); border: 1px solid var(--color-border); border-radius: 5px; padding: 5px 10px; font-size: 13px; line-height: 1.6; transition: background .25s,border-color .25s,transform .25s; }
+.skill-tags li:hover { background: #fff0d2; border-color: var(--color-primary); transform: translateY(-2px); }
+/* A stable two-line heading prevents the page moving as characters change. */
+app-typewriter { display: block; margin-bottom: 15px; }
+.hero .typewriter-heading { font-size: clamp(20px,2.1vw,27px); line-height: 1.5; margin: 0; letter-spacing: -.8px; }
+.typewriter-prefix { display: block; color: var(--color-dark); font-size: .78em; }
+.typed-line { display: block; height: 1.6em; white-space: nowrap; }
+.typed-text { color: var(--sage-ink); background: linear-gradient(transparent 76%,#FEC86888 76%,#FEC86888 94%,transparent 94%); }
+.typing-caret { display: inline-block; width: 2px; height: 1em; background: var(--sage-ink); margin-left: 5px; vertical-align: -.12em; animation: caret-blink 1s step-end infinite; }
+.caret-paused { animation: none; opacity: .45; }
+.typing-controls { display: flex; align-items: center; gap: 11px; min-height: 30px; }
+.typing-track { display: flex; gap: 4px; }
+.typing-track > span { width: 15px; height: 3px; border-radius: 2px; background: var(--color-border); transition: background .25s; }
+.typing-track > span.current { background: var(--color-primary); }
+.typing-caption { font-size: 9px; letter-spacing: 1.4px; color: var(--color-text-secondary); }
+.typing-toggle { display: grid; place-items: center; min-width: 32px; height: 32px; border: 1px solid transparent; border-radius: 50%; color: var(--color-text-secondary); background: transparent; font-size: 17px; }
+.typing-toggle:hover { border-color: var(--color-border); background: var(--color-surface); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@keyframes caret-blink { 50% { opacity: 0; } }
+@media (max-width: 1100px) {
+  .hero { gap: 35px; }
+  .hero-art { height: 420px; }
+  .hero .typewriter-heading { font-size: 22px; }
+  .code-note-body { font-size: 10px; }
+}
+@media (max-width: 850px) {
+  .hero { min-height: 640px; gap: 26px; }
+  .hero-art { height: 395px; }
+  .hero .typewriter-heading { font-size: 18px; }
+  .portrait-word { font-size: 61px; }
+  .experience-stamp { width: 82px; height: 82px; }
+  .experience-stamp strong { font-size: 32px; }
+  .code-note-body { font-size: 9px; }
+  .section { padding-block: 52px; }
+  .about-layout, .contact-layout { gap: 28px; }
+  .project-preview, .projects-grid > app-project-card:nth-child(-n+2) .project-preview { height: 225px; }
+}
+@media (max-width: 600px) {
+  .section { padding-block: 44px; }
+  .hero { padding-top: 28px; padding-bottom: 68px; gap: 28px; }
+  .hero h1 { font-size: clamp(67px,19vw,90px); margin-bottom: 24px; }
+  .hero .typewriter-heading { font-size: clamp(18px,5.4vw,25px); }
+  .hero-description { font-size: 14px; }
+  .hero-art { height: 340px; margin-bottom: 20px; }
+  .portrait-panel { border-top-left-radius: 80px; }
+  .portrait-topline { top: 20px; left: 35px; }
+  .portrait-topline > span:last-child { font-size: 34px; }
+  .portrait-word { top: 67px; font-size: 60px; }
+  .hero-art .art-image { top: 100px; }
+  .experience-stamp { top: 115px; }
+  .code-note { bottom: -20px; }
+  .code-note-body { padding: 10px 15px 13px; font-size: 10px; }
+  .hero-bottom { bottom: 15px; }
+  .expertise-band { padding-block: 16px; }
+  .expertise-band strong { font-size: 17px; gap: 10px; }
+  .skill-categories { grid-template-columns: 1fr; gap: 11px; }
+  .skill-category { padding: 16px 18px; }
+  .category-heading { margin-bottom: 11px; }
+  .category-heading h3 { font-size: 15px; }
+  .skill-tags { gap: 7px; }
+  .skill-tags li { font-size: 12px; padding: 4px 9px; }
+  .company-heading h3 { font-size: 15px; }
+  .experience-card { padding: 18px 16px; }
+  .project-body { padding: 18px; }
+  .contact-form { padding: 22px 18px; }
+  .typing-toggle { min-width: 44px; height: 36px; }
+}
+@media (prefers-reduced-motion: reduce) { .typing-caret { animation: none; } .skill-tags li:hover { transform: none; } }
