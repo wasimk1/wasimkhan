@@ -1,21 +1,20 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "cli": {
-    "packageManager": "npm"
-  },
-  "newProjectRoot": "projects",
   "projects": {
-    "PortfolioWebsiteV3": {
+    "portfolio": {
       "projectType": "application",
-      "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": {
+              "base": "dist",
+              "browser": ""
+            },
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -25,7 +24,12 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/styles.css",
+              "src/redesign.css",
+              "src/header.css",
+              "src/experience.css",
+              "src/compact.css"
             ]
           },
           "configurations": {
@@ -33,13 +37,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
+                  "maximumWarning": "600kB",
                   "maximumError": "1MB"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -56,16 +55,13 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "PortfolioWebsiteV3:build:production"
+              "buildTarget": "portfolio:build:production"
             },
             "development": {
-              "buildTarget": "PortfolioWebsiteV3:build:development"
+              "buildTarget": "portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
-        },
-        "test": {
-          "builder": "@angular/build:unit-test"
         }
       }
     }

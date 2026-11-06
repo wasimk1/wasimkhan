@@ -1,0 +1,51 @@
+/* Stick the Angular host itself so the header remains within the document scroll area. */
+app-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: block;
+}
+.site-header { position: relative; top: auto; background: var(--color-background); }
+.site-header.scrolled { box-shadow: 0 5px 24px rgba(71,60,51,.12); }
+.nav { height: 84px; gap: 22px; }
+.nav-links { gap: 20px; }
+.nav-links > a:not(.button) { font-size: 13px; }
+.nav .button { min-height: 44px; padding: 9px 16px; gap: 10px; white-space: nowrap; border-radius: 8px; }
+.linkedin-cta { background: var(--color-dark); color: var(--color-background); border: 1px solid var(--color-dark); }
+.linkedin-cta:hover { background: var(--sage-ink); border-color: var(--sage-ink); }
+html { scroll-padding-top: 105px; }
+@media (max-width: 1120px) {
+  .nav { height: 78px; }
+  .menu-toggle { display: grid; place-items: center; width: 44px; height: 44px; background: transparent; border: 1px solid var(--color-border); border-radius: 8px; font-size: 24px; }
+  .nav-links { position: absolute; top: 78px; left: 0; right: 0; display: none; background: var(--color-background); border-bottom: 1px solid var(--color-border); padding: 16px 32px 24px; max-height: calc(100dvh - 78px); overflow-y: auto; box-shadow: 0 12px 20px rgba(71,60,51,.08); }
+  .nav-links.open { display: flex; flex-direction: column; align-items: stretch; gap: 5px; animation: menu-in .25s; }
+  .nav-links > a:not(.button) { font-size: 16px; padding: 10px 12px; min-height: 44px; }
+  .nav-links > a:not(.button)::after { display: none; }
+  .nav-links > a.active { background: var(--color-surface); border-radius: 6px; }
+  .nav-cta { margin-top: 8px; }
+  .linkedin-cta { margin-top: 5px; }
+}
+/* JetBrains Mono: consistent semibold typography. */
+:root { --font: 'JetBrains Mono', monospace; }
+body { font-weight: 600; }
+h1, h2, h3, .brand, .button, .nav-links > a:not(.button) { font-weight: 600; }
+.hero h1 { letter-spacing: -5px; }
+.hero h2, .hero h2 em, .serif-accent, .signature { font-family: var(--font); font-weight: 600; }
+.hero h2 { font-size: 21px; }
+.hero h2 em { font-size: 22px; }
+.nav-links { gap: 15px; }
+.brand { font-size: 19px; letter-spacing: -1px; }
+.nav-links > a:not(.button) { font-size: 12px; }
+.nav .button { font-size: 12px; padding-inline: 13px; }
+.section h2 { letter-spacing: -1.5px; }
+@media (max-width: 1120px) { .nav-links > a:not(.button) { font-size: 16px; } }
+@media (max-width: 850px) { .hero h2, .hero h2 em { font-size: 17px; } }
+@media (max-width: 600px) {
+  .hero h1 { font-size: clamp(72px,22vw,110px); letter-spacing: -4px; }
+  .hero h2, .hero h2 em { font-size: 18px; }
+  .hero-actions .button { font-size: 11px; padding-inline: 12px; }
+  .brand { font-size: 17px; }
+  .contact-copy h2 { font-size: clamp(28px,7.8vw,38px); }
+  .section h2 { font-size: clamp(28px,7.8vw,37px); }
+  .project-title-row h3, .projects-grid > app-project-card:nth-child(-n+2) .project-title-row h3 { font-size: 18px; }
+}

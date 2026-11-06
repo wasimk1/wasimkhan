@@ -1,59 +1,27 @@
-# PortfolioWebsiteV3
+# Wasim Khan — Angular portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.4.
+A responsive, standalone-component Angular portfolio using the requested cream, sage, gold and brown palette. No backend or database is required.
 
-## Development server
+## Run locally
 
-To start a local development server, run:
-
-```bash
-ng serve
+```sh
+npm ci
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open http://127.0.0.1:4200. Build with `npm run build`; deploy the contents of `dist/` to any static host.
 
-## Code scaffolding
+## Personalize
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Edit `src/app/portfolio.config.ts` to add verified email, LinkedIn, GitHub, Instagram, CV, repository and live demo URLs.
+- Put your PDF CV in `public/` and set `cvUrl` to `/your-file.pdf`.
+- The hero uses a generated developer illustration, not a portrait of Wasim. Replace `public/developer.png` with your own photo if desired, and update the image alt text.
+- Project visuals are illustrative interface concepts, clearly labeled as such; replace with real screenshots when available.
+- Contact validation works locally. No data is stored or sent. Once an email address is configured, submission opens a mailto draft; the visitor still sends it in their email client. Replace the documented `submit` adapter to integrate an email service later.
+- Empty external URLs render as unavailable states; no guessed social handles or project links are used.
 
-```bash
-ng generate component component-name
-```
+## Structure
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Each primary section has a standalone Angular component. `shared.components.ts` holds icons and social links; `project-card.component.ts` is reused across the five projects. Global tokens and responsive styles live in `src/styles.css`.
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Includes keyboard focus indicators, semantic sections, labeled form validation, skip navigation, mobile menu, active-section tracking, and reduced-motion support.
