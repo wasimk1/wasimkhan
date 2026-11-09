@@ -14,7 +14,6 @@ import { IconComponent } from "./shared.components";
             >
             <h2>Professional Experience<span class="heading-dot">.</span></h2>
           </div>
-          <p>Growing through real challenges.<br />Building with purpose.</p>
         </div>
         <div class="timeline">
           @for (company of companies; track company.name) {
@@ -50,7 +49,9 @@ import { IconComponent } from "./shared.components";
                         <h4>{{ role.title }}</h4>
                         <span class="role-date">{{ role.date }}</span>
                       </div>
-                      <p class="job-description">{{ role.description }}</p>
+                      <p class="experience-description">
+                        {{ role.description }}
+                      </p>
                       @if (role.tags.length) {
                         <div class="tags">
                           @for (tag of role.tags; track tag) {
@@ -80,12 +81,13 @@ export class ExperienceComponent {
           title: "Software Engineer",
           date: "Jan 2024 — Present",
           description:
-            "Building enterprise web applications and APIs across the .NET and Angular stack.",
+            "Developed and maintained manufacturing module features using .NET Core.\nBuilt Angular and Razor screens with forms, validation, search, and API integration. \nImproved application performance using Redis caching and LINQ query optimization.",
           tags: [
             ".NET Core",
             "ASP.NET Core",
             "C#",
             "SQL Server",
+            "REST APIs",
             "EF Core",
             "LINQ",
             "Angular",
@@ -103,14 +105,13 @@ export class ExperienceComponent {
           title: "Software Developer",
           date: "Feb 2023 — Jan 2024",
           description:
-            "Developing software solutions and growing through collaborative engineering.",
-          tags: [],
+            "Developed a policy-cloning feature for an insurance application, enabling underwriters to reuse existing policy data and update only the required fields, reducing repetitive manual data entry.",
+          tags: ["C#", ".NET Framework", "ASP.NET", "SQL Server"],
         },
         {
           title: "Graduate Trainee",
           date: "Oct 2022 — Feb 2023",
-          description:
-            "Building a strong foundation in software development and professional practice.",
+          description: "", //Building a strong foundation in software development and professional practice.
           tags: [],
         },
       ],

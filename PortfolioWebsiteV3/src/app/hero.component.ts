@@ -9,18 +9,13 @@ import { TypewriterComponent } from "./typewriter.component";
   template: `
     <section id="home" class="hero container" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <div class="eyebrow hero-eyebrow">
-          <span class="tiny-line"></span> FULL STACK .NET DEVELOPER
-        </div>
+        <div class="eyebrow hero-eyebrow">FULL STACK .NET DEVELOPER</div>
         <p class="hello">Hello, I'm</p>
         <h1 id="hero-title">
           Wasim<br /><span>Khan<span class="gold-period">.</span></span>
         </h1>
         <app-typewriter />
-        <p class="hero-description">
-          I turn complex problems into fast, reliable web experiences with .NET
-          Core, Angular and a little attention to every detail.
-        </p>
+        <p class="hero-description">Backend-focused Software Engineer.</p>
         <div class="hero-actions">
           <a href="#projects" class="button button-gold"
             >Explore my work <app-icon name="arrow-up-right"
@@ -53,47 +48,36 @@ import { TypewriterComponent } from "./typewriter.component";
       </div>
       <div class="hero-art" aria-label="Illustrated developer workspace">
         <div class="portrait-panel">
-          <div class="portrait-topline">
-            <span>THE HUMAN BEHIND THE CODE</span
-            ><span aria-hidden="true">✳</span>
-          </div>
-          <span class="portrait-word" aria-hidden="true">create.</span>
+          <div class="portrait-topline"></div>
           <div class="art-image">
             <img
               src="developer.png"
               alt="A friendly illustrated developer working on a laptop"
-              width="440"
-              height="440"
+              width="600"
+              height="600"
               fetchpriority="high"
             />
-          </div>
-          <div class="portrait-bottomline">
-            <span>LOGIC MEETS CREATIVITY</span><span>01 — WK</span>
           </div>
         </div>
         <div class="experience-stamp">
           <strong>4<span>+</span></strong
-          ><span>YEARS OF<br />BUILDING THINGS</span>
+          ><span>Years of<br />Experience</span>
         </div>
         <div class="code-note" aria-label="My development approach">
           <div class="code-note-top">
-            <span><i></i><i></i><i></i></span><span>the-approach.ts</span
-            ><app-icon name="code-slash" />
+            <span>the-approach.ts</span>
           </div>
           <div class="code-note-body">
             <span class="code-muted">const</span> developer =
             <span class="code-gold">&#123;</span><br />&nbsp; mindset:
-            <span class="code-sage">'solve, build, improve'</span>,<br />&nbsp;
-            focus: <span class="code-sage">'the details that matter'</span
-            ><br /><span class="code-gold">&#125;;</span>
+            <span class="code-sage">'solve, build, improve'</span>
+            <br /><span class="code-gold">&#125;;</span>
           </div>
         </div>
       </div>
       <div class="hero-bottom">
         <a href="#skills" class="scroll-link" aria-label="Scroll to Skills"
-          ><span><app-icon name="arrow-down" /></span> Explore my toolkit</a
-        ><span class="hero-bottom-note"
-          >THOUGHTFUL CODE. MEANINGFUL SOLUTIONS.</span
+          ><span><app-icon name="arrow-down" /></span> Explore my tech stack</a
         >
       </div>
     </section>

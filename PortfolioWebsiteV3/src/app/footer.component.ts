@@ -13,12 +13,10 @@ import { portfolio } from "./portfolio.config";
         <div class="closing-invitation">
           <p class="closing-label">LET'S CONNECT</p>
           <h2 id="closing-title">
-            Let's build something<br /><span>worth shipping.</span>
-            <span class="closing-bolt">⚡</span>
+            Let's build something<br /><span>together.</span>
           </h2>
           <p class="closing-description">
-            Open to new opportunities, collaborations, and interesting
-            conversations.
+            Open to new opportunities or collaborations.
           </p>
           <div class="closing-actions">
             <a
@@ -33,9 +31,6 @@ import { portfolio } from "./portfolio.config";
           </div>
         </div>
         <nav class="closing-socials" aria-label="Connect with Wasim">
-          <span class="social-caption"
-            >GOOD THINGS START<br />WITH A CONVERSATION.</span
-          >
           <a [href]="profile.linkedin" target="_blank" rel="noopener noreferrer"
             >LinkedIn <span aria-hidden="true">↗</span></a
           >
@@ -62,8 +57,7 @@ import { portfolio } from "./portfolio.config";
         </nav>
       </div>
       <div class="closing-personality">
-        <p>Built with Angular + too much debugging ☕</p>
-        <code>{{ "while(alive) { learn(); build(); improve(); }" }}</code>
+        <p>Built with Angular</p>
       </div>
       <div class="closing-bottom">
         <div class="closing-identity">

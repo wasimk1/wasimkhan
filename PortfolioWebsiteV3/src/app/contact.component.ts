@@ -38,7 +38,6 @@ import { portfolio } from "./portfolio.config";
             </div>
           }
         </div>
-        <span class="contact-decoration" aria-hidden="true">✳</span>
       </div>
       <form
         #contactForm="ngForm"
@@ -53,6 +52,7 @@ import { portfolio } from "./portfolio.config";
               id="name"
               name="name"
               [(ngModel)]="message.name"
+              placeholder="Enter name"
               required
               maxlength="100"
               autocomplete="name"
@@ -80,7 +80,8 @@ import { portfolio } from "./portfolio.config";
               required
               email
               type="email"
-              maxlength="254"
+              maxlength="50"
+              placeholder="Enter emailId"
               autocomplete="email"
               #emailField="ngModel"
               [attr.aria-invalid]="

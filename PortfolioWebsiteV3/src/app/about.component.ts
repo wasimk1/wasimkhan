@@ -12,8 +12,7 @@ import { Component } from "@angular/core";
         <div class="about-manifesto">
           <span class="eyebrow">04 / ABOUT ME</span>
           <h2 id="about-title" class="reveal">
-            Code. <span>Build.</span><br />Break. <span>Fix.</span
-            ><br />Repeat.<span class="heading-bolt">⚡</span>
+            Code. <span>Build.</span><br />Break. <span>Fix.</span><br />Repeat.
           </h2>
           <div class="about-story">
             <p>
@@ -32,14 +31,13 @@ import { Component } from "@angular/core";
             </p>
           </div>
           <p class="about-belief">
-            <span>Full stack is my toolkit.</span>
+            <span>Full stack .NET Developer</span>
           </p>
         </div>
         <aside class="about-terminal" aria-label="Wasim's developer terminal">
           <div class="terminal-chrome">
-            <span class="window-dots" aria-hidden="true"
-              ><i></i><i></i><i></i></span
-            ><span>wasim / developer</span><span aria-hidden="true">⌘</span>
+            <span aria-hidden="true"><i></i><i></i><i></i></span
+            ><span>wasim / developer</span><span aria-hidden="true"></span>
           </div>
           <div class="terminal-session">
             <span class="session-label">A LITTLE ABOUT ME</span>
@@ -49,24 +47,23 @@ import { Component } from "@angular/core";
               <dt><span aria-hidden="true">❯</span> role</dt>
               <dd>Full Stack .NET Developer</dd>
               <dt><span aria-hidden="true">❯</span> favorite_area</dt>
-              <dd>Backend Development ⚡</dd>
+              <dd>Backend Development</dd>
               <dt><span aria-hidden="true">❯</span> currently_learning</dt>
               <dd>Always something new...</dd>
               <dt><span aria-hidden="true">❯</span> status</dt>
               <dd class="terminal-status">
                 Building something...
-                <span class="terminal-cursor" aria-hidden="true">█</span>
+                <span aria-hidden="true">█</span>
               </dd>
             </dl>
           </div>
           <div class="terminal-footer">
-            <span><i aria-hidden="true"></i> curiosity.exe is running</span
-            ><span aria-hidden="true">↵</span>
+            <span><i aria-hidden="true"></i> curiosity.exe is running</span>
           </div>
         </aside>
       </div>
       <div class="about-toolkit">
-        <h3>MY EVERYDAY TOOLKIT</h3>
+        <h3>MY EVERYDAY TECH STACK</h3>
         <ul class="about-tech" aria-label="Main technologies">
           @for (technology of technologies; track technology) {
             <li>{{ technology }}</li>
