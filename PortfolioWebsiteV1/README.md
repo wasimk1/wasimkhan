@@ -1,2 +1,0 @@
-# wasimkhan
-Software Engineer
