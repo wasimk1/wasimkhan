@@ -45,3 +45,196 @@
 @media (max-width: 850px) { .about-stage { grid-template-columns: 1fr; gap: 30px; } .developer-about h2 { font-size: clamp(38px,7.5vw,62px); } .about-terminal { transform: none; } .about-toolkit { align-items: flex-start; flex-direction: column; gap: 13px; } .about-toolkit h3 { flex-basis: auto; } .personality-card { padding: 20px 15px; flex-direction: column; } }
 @media (max-width: 540px) { .personality-grid { grid-template-columns: 1fr; gap: 10px; } .personality-card { flex-direction: row; gap: 16px; padding: 19px; } .personality-card p { font-size: 15px; } .terminal-session { padding: 22px 18px; } .terminal-chrome { padding-inline: 15px; } .terminal-footer { padding-inline: 15px; } .about-terminal { box-shadow: 5px 6px 0 #8d9f5e24; } .about-toolkit { margin-top: 30px; } }
 @media (prefers-reduced-motion: reduce) { .terminal-cursor { animation: none; } .about-tech li, .personality-card { transition: none; } .about-tech li:hover, .personality-card:hover { transform: none; } }
+
+/* -------------------------------------------------------------------------
+   About section refinement
+   Consistent page gutters, calmer typography and balanced card proportions.
+   ------------------------------------------------------------------------- */
+
+.developer-about .container {
+  width: calc(100% - clamp(36px, 7vw, 112px) - clamp(36px, 7vw, 112px));
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+.developer-about {
+  padding-block: clamp(54px, 6vw, 76px);
+}
+
+.about-stage {
+  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+  gap: clamp(36px, 5vw, 68px);
+}
+
+.developer-about .eyebrow {
+  margin-bottom: 16px;
+  font-size: 11px;
+  letter-spacing: 1.8px;
+}
+
+.developer-about h2 {
+  font-size: clamp(36px, 4.1vw, 56px);
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+.about-story {
+  max-width: 590px;
+}
+
+.about-story p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 11px;
+}
+
+.about-belief {
+  margin-top: 19px;
+  padding-left: 15px;
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
+.about-terminal {
+  transform: rotate(0.5deg);
+  border-radius: 12px;
+  box-shadow: 7px 8px 0 #8d9f5e20;
+}
+
+.terminal-chrome {
+  padding: 14px 18px;
+}
+
+.terminal-session {
+  padding: 23px;
+}
+
+.terminal-session dl {
+  margin-top: 21px;
+}
+
+.terminal-session dt {
+  margin-top: 17px;
+  font-size: 11px;
+}
+
+.terminal-session dd {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.terminal-footer {
+  padding: 11px 18px;
+}
+
+.about-toolkit {
+  margin-top: 32px;
+  padding-block: 20px;
+  gap: 22px;
+}
+
+.about-toolkit h3 {
+  flex-basis: 150px;
+}
+
+.about-tech {
+  gap: 8px;
+}
+
+.about-tech li {
+  padding: 6px 10px;
+  font-size: 11px;
+}
+
+.personality-grid {
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.personality-card {
+  gap: 12px;
+  padding: 19px 17px;
+}
+
+.personality-icon {
+  font-size: 23px;
+}
+
+.personality-card p {
+  font-size: clamp(13px, 1.15vw, 15px);
+}
+
+@media (max-width: 1100px) {
+  .developer-about .container {
+    width: calc(100% - 48px - 48px);
+  }
+
+  .about-stage {
+    gap: 34px;
+  }
+
+  .developer-about h2 {
+    font-size: clamp(36px, 4.8vw, 52px);
+  }
+}
+
+@media (max-width: 850px) {
+  .developer-about .container {
+    width: calc(100% - 36px - 36px);
+  }
+
+  .about-stage {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .about-story {
+    max-width: 680px;
+  }
+
+  .about-terminal {
+    max-width: 680px;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .personality-card {
+    padding: 18px 14px;
+  }
+}
+
+@media (max-width: 540px) {
+  .developer-about .container {
+    width: calc(100% - 24px - 24px);
+  }
+
+  .developer-about {
+    padding-block: 42px;
+  }
+
+  .developer-about h2 {
+    font-size: clamp(34px, 9vw, 44px);
+    margin-bottom: 16px;
+  }
+
+  .about-story p {
+    font-size: 13px;
+    line-height: 1.75;
+  }
+
+  .about-terminal {
+    transform: none;
+  }
+
+  .terminal-session {
+    padding: 20px 17px;
+  }
+
+  .about-toolkit {
+    margin-top: 26px;
+    padding-block: 17px;
+  }
+
+  .personality-grid {
+    margin-top: 17px;
+  }
+}

@@ -16,7 +16,7 @@
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   scroll-padding-top: 100px;
 }
 body {
@@ -2225,5 +2225,64 @@ app-icon {
   }
   .footer-bottom {
     font-size: 11px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   Simple, subtle motion: fade-in only, no sliding or bouncing.
+   ------------------------------------------------------------------------- */
+
+.reveal-ready {
+  opacity: 0;
+  transform: none;
+  transition: opacity 280ms ease-out;
+  will-change: opacity;
+}
+
+.reveal-ready.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Keep hover feedback subtle and consistent. */
+.project-card,
+.skill-category,
+.experience-row,
+.personality-card,
+.value-card,
+.about-tech li,
+.button,
+.nav-links > a {
+  transition-duration: 180ms;
+}
+
+.project-card:hover,
+.skill-category:hover,
+.experience-row:hover,
+.personality-card:hover,
+.value-card:hover {
+  transform: none;
+}
+
+/* Simple dropdown appearance; no sliding menu animation. */
+.nav-links.open {
+  animation: none;
+}
+
+/* Honour reduced-motion preferences. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready,
+  .reveal-ready.revealed,
+  .project-card,
+  .skill-category,
+  .experience-row,
+  .personality-card,
+  .value-card,
+  .about-tech li,
+  .button,
+  .nav-links > a {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
   }
 }
