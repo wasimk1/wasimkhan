@@ -1,10 +1,11 @@
 
 name: Deploy Angular Portfolio
 
-"on":
+on:
   push:
     branches:
-      - main
+      - master
+
   workflow_dispatch:
 
 permissions:
@@ -39,10 +40,10 @@ jobs:
         working-directory: PortfolioWebsiteV3
         run: npm run build -- --configuration production --base-href /wasimkhan/
 
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Pages artifact
+      - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: PortfolioWebsiteV3/dist
